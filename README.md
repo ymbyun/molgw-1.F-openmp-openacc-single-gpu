@@ -1,9 +1,19 @@
------------------------------------------
-#                 MOLGW
------------------------------------------
+------------------------------------------------
+# MOLGW 1.F with OpenMP and OpenACC (Single GPU)
+------------------------------------------------
 
 
 Many-body perturbation theory for atoms, molecules, and clusters
+
+
+## Introduction
+
+- This is MOLGW 1.F with OpenMP and OpenACC (Single GPU).
+- A manual for how to compile OpenMP and OpenACC versions is coming up.
+- An implementation paper for OpenMP and OpenACC parallelization is coming up.
+- Multi-GPU support is coming up.
+
+Young-Moo Byun
 
 
 ## Getting started
