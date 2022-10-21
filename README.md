@@ -10,7 +10,7 @@ Many-body perturbation theory for atoms, molecules, and clusters
 
 Hi there!
 
-I implemented OpenMP (CPU) and OpenACC (GPU) into Fabien Bruneval's MOLGW 1.F.
+I implemented OpenMP (CPU) and OpenACC (GPU) into Fabien Bruneval's MOLGW 1.
 I already merged my OpenMP implemenation into MOLGW 2, and I'll merge my OpenACC implementation into MOLGW 3 soon.
 Currently, I'm working on a few things:
 
