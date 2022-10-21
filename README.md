@@ -16,7 +16,9 @@ Hi there! This is MOLGW 1.F with OpenMP and OpenACC (Single GPU). Currently, I'm
 
 Please let me know if you have any questions. :)
 
-Young-Moo Byun 2022/10/21
+Young-Moo Byun
+
+2022/10/21
 
 
 ## Getting started
