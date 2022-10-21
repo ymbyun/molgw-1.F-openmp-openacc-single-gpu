@@ -1,0 +1,412 @@
+\documentclass[aps,prb,reprint,showpacs]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{verbatim}
+
+%definitions
+\def\br{\mathbf{r}}
+\def\bR{\mathbf{R}}
+\def\bq{\mathbf{q}}
+\def\bk{\mathbf{k}}
+\def\bG{\mathbf{G}}
+\def\half{\frac{1}{2}}
+\def\Rho{\mathrm{P}}
+\def\h2o{\mathrm{H}_2\mathrm{O}}
+
+\newcommand\refeq[1]{Eq.~(\ref{#1})}
+\newcommand\refeqs[1]{Eqs.~(\ref{#1})}
+\newcommand\wf[2]{\phi_{#1}^{#2}}
+
+
+\begin{document}
+
+
+\title{Implementation notes for \textsc{MOLGW}}
+\author{Fabien Bruneval}
+\affiliation{CEA, DEN, Service de Recherches de M\'etallurgie Physique, F-91191 Gif-sur-Yvette, France}
+
+\maketitle
+
+
+
+
+
+
+\section{Basic ingredients}
+
+The wavefunctions are written as a linear combination of contracted Gaussian functions:
+\begin{equation}
+ \varphi_{i\sigma} (\br) = \sum_{\alpha} C_{\alpha i \sigma} \phi_\alpha(\br) .
+\end{equation}
+
+The Coulomb integrals are written as
+\begin{equation}
+ ( i j \sigma | k l \tau ) = \iint d\br d\br' \varphi_{i\sigma} (\br)  \varphi_{j\sigma} (\br) \frac{1}{|\br-\br'|}  \varphi_{k\tau}(\br') \varphi_{l\tau}(\br')
+\end{equation}
+The wavefunctions are real, so the conguate symbols are not required.
+
+
+
+\section{BSE in transition space}
+
+\begin{equation}
+  [\chi_0^{-1}]_{ij \sigma}^{kl \tau}(\omega) =  
+     \frac{ \omega - (\epsilon_{j\sigma} - \epsilon_{i\sigma} ) }
+          {   f_{i\sigma}  - f_{j\sigma} } \delta_{ij} \delta_{kl} \delta_{\sigma\tau} 
+\end{equation}
+
+\begin{multline}
+  [\chi^{-1}]_{ij \sigma}^{kl \tau}(\omega) =  
+     \frac{ \omega - (\epsilon_{j\sigma} - \epsilon_{i\sigma} ) }
+          {   f_{i\sigma}  - f_{j\sigma} } \delta_{ij} \delta_{kl} \delta_{\sigma\tau}  \\
+    - ( ij \sigma | kl \tau )
+    + \delta_{\sigma\tau} ( ik \sigma | jl \sigma) 
+\end{multline}
+
+
+\begin{multline}
+( f_{i\sigma}  - f_{j\sigma} )  [\chi^{-1}]_{ij \sigma}^{kl \tau}(\omega) =
+    [ \omega - ( \epsilon_{j\sigma} - \epsilon_{i\sigma} ) ] \delta_{ij} \delta_{kl} \delta_{\sigma\tau}  \\
+    - ( f_{i\sigma}  - f_{j\sigma} ) [ ( ij \sigma | kl \tau ) + \delta_{\sigma\tau} ( ik \sigma | jl \sigma) ] 
+\end{multline}
+
+
+\begin{multline}
+ [ H_\mathrm{BSE} ]_{ij \sigma}^{kl \tau} = 
+      ( \epsilon_{j\sigma} - \epsilon_{i\sigma} ) \delta_{ij} \delta_{kl} \delta_{\sigma\tau}  \\
+    + ( f_{i\sigma}  - f_{j\sigma} ) [ ( ij \sigma | kl \tau ) - \delta_{\sigma\tau} ( ik \sigma | jl \sigma) ] 
+\end{multline}
+ 
+
+
+
+\section{Symmetrization of the Bethe-Salpeter equation}
+
+
+Let us write the TDHF equation.
+The generalization to screened TDHF (=BSE) will come later.
+\begin{equation}
+ \left( 
+   \begin{array}{cc}
+      \phantom{-}A  &  \phantom{-}B \\
+      -B  & -A 
+   \end{array}
+ \right) 
+   \left(
+   \begin{array}{c}
+       X \\
+       Y 
+   \end{array}
+   \right)
+  = \Omega
+   \left(
+   \begin{array}{c}
+       X \\
+       Y 
+   \end{array}
+   \right)
+\end{equation}
+or alternatively
+\begin{subequations}
+\begin{eqnarray}
+ \label{eq:xy1}
+ A X   & + B Y    &=    \Omega X \\
+ \label{eq:xy2}
+ -B X  & -A Y     &= \Omega Y
+\end{eqnarray}
+\end{subequations}
+where
+\begin{subequations}
+\begin{eqnarray}
+ A_{ij\sigma \, kl \tau} & = & \delta_{ik} \delta_{jl} \delta_{\sigma\tau} (\epsilon_{j\sigma} - \epsilon_{i\sigma}) \nonumber \\
+                         &   & + ( i j \sigma | k l \tau ) - \delta_{\sigma\tau} ( i k | j l ) \\
+ B_{ij\sigma \, kl \tau} & = & ( i j \sigma | k l \tau )  - \delta_{\sigma\tau} ( i k | j l ) 
+\end{eqnarray}
+\end{subequations}
+
+By adding or subtracting Eqs.~(\ref{eq:xy1}),(\ref{eq:xy2}), one gets
+\begin{subequations}
+\begin{eqnarray}
+ ( A + B ) ( X + Y ) & = &  \Omega ( X - Y ) \\
+ ( A - B ) ( X - Y ) & = &  \Omega ( X + Y ) 
+\end{eqnarray}
+\end{subequations}
+Combining the latter two equations yields an equation for $(X+Y)$
+\begin{equation}
+ ( A + B ) ( X+Y ) = \Omega^2 (A-B)^{-1} (X+Y) ,
+\end{equation}
+which can be further symmetrized by introducing
+\begin{equation}
+ Z = (A-B)^{-1/2} (X+Y) .
+\end{equation}
+Finally,
+\begin{equation}
+ (A-B)^{1/2}(A+B)(A-B)^{1/2} Z = \Omega^2 Z .
+\end{equation}
+The matrix we have to diagonalize is now symmetric and half smaller than the BSE matrix.
+
+How to get $X$ and $Y$ from $Z$? 
+\begin{subequations}
+\begin{eqnarray}
+  X + Y &=& (A-B)^{1/2} Z \\
+  X - Y &=& \Omega (A-B)^{-1/2} Z .
+\end{eqnarray}
+\end{subequations}
+Then adding or subtracting the latter two equations,
+\begin{subequations}
+\begin{eqnarray}
+  X  &=&  \half \left[ (A-B)^{1/2} + \Omega (A-B)^{-1/2}  \right] Z  \\
+  Y  &=&  \half \left[ (A-B)^{1/2} - \Omega (A-B)^{-1/2}  \right] Z .
+\end{eqnarray}
+\end{subequations}
+
+Let us show that the left eigenvectors are obtained as $( ^tX , - ^t Y)$.
+As $A$ and $B$ are symmetric, then $^tX A = A X$.
+Hence,
+\begin{equation}
+ ( ^tX , - ^t Y)
+ \left( 
+   \begin{array}{cc}
+      \phantom{-}A  &  \phantom{-}B \\
+      -B  & -A 
+   \end{array}
+ \right) 
+ ( ^tX , - ^t Y)
+  \Omega
+\end{equation}
+which yield the same equation set:
+\begin{subequations}
+\begin{eqnarray}
+  AX + BY & = & \Omega X  \\
+  BX + AY & = &-\Omega Y 
+\end{eqnarray}
+\end{subequations}
+This is the same of equations as for the right eigenvectors.
+
+
+
+
+
+
+
+\section{How to translate the different optical constants}
+
+The dynamical dipole polarizability tensor $\alpha_{xy}(\omega)$ is defined as
+\begin{equation}
+ \alpha_{xy}(\omega) = \sum_s R_s^x R_s^y
+         \left[ \frac{1}{\omega-\Omega_s + i\eta}
+               -\frac{1}{\omega+\Omega_s + i\eta} \right]
+\end{equation}
+The optical measurements in gas phase are isotropic
+\begin{equation}
+  \bar \alpha(\omega) = \frac{1}{3} \sum_\mu \alpha_{\mu\mu}(\omega) 
+\end{equation}
+The imaginary part reads
+\begin{equation}
+  \mathrm{Im} \bar \alpha(\omega) =  \frac{1}{3} \sum_s \sum_\mu |R_s^\mu|^2 \pi
+   \left[ \delta(\omega - \Omega_s) - \delta(\omega + \Omega_s) \right]
+\end{equation}
+The oscillator strengths $f_n$ are defined as
+\begin{equation}
+  f_s = \frac{2}{3} \Omega_s \sum_\mu |R_s^\mu|^2 .
+\end{equation}
+They are handy since they satisfy the Thomas-Reiche-Kuhn sumrule:
+\begin{equation}
+  \sum_s f_s = N ,
+\end{equation}
+where $N$ is the number of electrons.
+Then, the imaginary part of the dynamical dipole polarizability reads
+\begin{equation}
+  \mathrm{Im} \bar \alpha(\omega) =  \sum_s \frac{\pi}{2} \frac{f_s}{\Omega_s} 
+   \left[ \delta(\omega - \Omega_s) - \delta(\omega + \Omega_s) \right]
+\end{equation}
+The photoabsorption cross section $\sigma(\omega)$ is defined as
+\begin{equation}
+  \sigma(\omega) = \frac{4\pi}{c} \omega \mathrm{Im}\bar\alpha(\omega) ,
+\end{equation}
+where $c$ is the speed of light,
+and hence
+\begin{equation}
+  \sigma(\omega) = \frac{2\pi^2}{c} \sum_s f_s
+      \left[ \delta(\omega - \Omega_s) - \delta(\omega + \Omega_s) \right].
+\end{equation}
+The Thomas-Reiche-Kuhne sumrule translates into
+\begin{equation}
+ \int_0^{+\infty} \sigma(\omega) = \frac{2\pi^2}{c} N .
+\end{equation}
+
+Let us demonstrate the link with the solid-state quantity $\mathrm{Im} \varepsilon(\omega)$
+through the $f$-sumrule which is analogous to Thomas-Reiche-Kuhne sumrule.
+\begin{equation}
+ \int_0^{+\infty} \omega \mathrm{Im}\varepsilon(\omega) = \frac{2\pi^2}{V} N ,
+\end{equation}
+where $V$ is the volume that contains the $N$ electrons.
+By identification, 
+\begin{equation}
+ \sigma(\omega) = \frac{V}{c} \omega \mathrm{Im}\varepsilon(\omega)
+\end{equation}
+and
+\begin{equation}
+ \mathrm{Im} \bar\alpha(\omega) = \frac{V}{4\pi} \mathrm{Im}\varepsilon(\omega)
+\end{equation}
+
+
+
+
+
+
+
+\section{Luttinger-Ward total energy}
+
+Let us evaluate energy part named $E_1$:
+\begin{eqnarray}
+ E_1 & = & i\text{Tr} \left[ \Sigma_c G \right]  \\
+     & = & i\int d\br_1 d\br_2 d \tau \Sigma_c(\br_1,\br_2,\tau) G(\br_2,\br_1,-\tau)
+\end{eqnarray}
+
+The Fourier transforms read
+\begin{eqnarray}
+ \Sigma_c(\tau) & = & \frac{1}{2\pi} \int d\omega_1 \Sigma_c(\omega_1) e^{-i\omega_1 \tau}   \\
+       G (\tau) & = & \frac{1}{2\pi} \int d\omega_2        G(\omega_2) e^{ i\omega_2 \tau}
+\end{eqnarray}
+
+Inserting these Fourier transforms in $E_1$ gives
+\begin{multline}
+ E_1 = \frac{i}{(2\pi)^2} \int d\br_1 d\br_2 d\omega_1 d\omega_2 \Sigma_c(\omega_1) G(\omega_2) \\
+        \times \int d\tau e^{i(\omega_2-\omega_1)\tau}
+\end{multline}
+\begin{equation}
+ E_1 = \frac{i}{2\pi} \int d\br_1 d\br_2 d\omega \Sigma_c(\omega) G(\omega)
+\end{equation}
+
+Introducing the expressions of $G$
+\begin{equation}
+ G(\br_2,\br_1,\omega) = \sum_i \frac{\varphi_i(\br_2) \varphi_i^*(\br_1)}
+                                     {\omega - \epsilon_i \pm i\eta}
+\end{equation}
+and of $\Sigma_c$
+\begin{equation}
+ \Sigma_c(\br_1,\br_2,\omega) = \sum_s \frac{ L_s(\br_1) L_s(\br_2) }
+                                            { \omega - E_s \pm i\eta }
+\end{equation}
+
+Applying the residu theorem to perform the frequency integral,
+\begin{multline}
+ \int d\omega \frac{1}{\omega - \epsilon_i \pm i\eta} \frac{1}{\omega - E_s \pm i\eta} \\
+   = 
+    2 \pi i \left[ \theta(\mu - \epsilon_i)\theta(E_s-\mu) \right. 
+    \\ \left.
+    - \theta(\epsilon_i-\mu)\theta(\mu-E_s) \right]
+        \frac{1}{\epsilon_i - E_s}
+\end{multline}
+
+\begin{multline}
+ E_1 = -\sum_{si} \frac{L_s(i) L_s(i)}{\epsilon_i - E_s} \\
+     \times \left[ \theta(\mu - \epsilon_i)\theta(E_s-\mu) 
+\right.  \\ \left.
+    - \theta(\epsilon_i-\mu)\theta(\mu-E_s) \right]
+\end{multline}
+
+Let us further detail the calculation of $L_s$ and $E_s$.
+\begin{multline}
+ W(\br_1,\br_2,\omega) = \sum_{t>0} R_t(\br_1) R_t(\br_2) \\
+   \times \left[ 
+                \frac{1}{\omega-\Omega_t +i \eta} 
+               -\frac{1}{\omega+\Omega_t -i \eta} 
+           \right]
+\end{multline}
+
+\begin{multline}
+ \langle i | \Sigma_c(\omega) | i \rangle =
+     \sum_{ \substack{j \\ t>0 } }  R_t(i j) R_t( i j) \\
+   \times \left[
+           \frac{ \theta(\mu - \epsilon_j) } { \omega - (\epsilon_j - \Omega_t ) - i\eta } 
+\right.  \\ \left.
+          +\frac{ \theta(\epsilon_j - \mu) } { \omega - (\epsilon_j + \Omega_t ) + i\eta }
+          \right]
+\end{multline}
+
+\begin{multline}
+E_1 = 
+ -\sum_{\substack{i j \\ t>0 } } R_t(i j) R_t(i j) \\
+     \times \left[ 
+ \frac{ \theta(\mu - \epsilon_i)\theta(\epsilon_j-\mu) }
+      { \epsilon_i - \epsilon_j - \Omega_t }
+\right.  \\ \left.
+    - \frac{ \theta(\epsilon_i-\mu)\theta(\mu-\epsilon_j)  }
+      { \epsilon_i - \epsilon_j + \Omega_t } 
+   \right]
+\end{multline}
+
+In the case of $W=v$, one should recover the MP2 direct term (double-ring term).
+In this case,
+\begin{eqnarray}
+  t & =&  k,l~\text{where}~l~\text{is virtual} \nonumber \\
+    &  &  ~~~\text{and}~k~\text{is empty} \nonumber \\
+  R_t(ij)  &=& ( i j | k l ) \\
+  \Omega_t &=& \epsilon_l - \epsilon_k 
+\end{eqnarray}
+
+\begin{multline}
+E_1 = 
+ -\sum_{ \substack{ i, k ~\in~\text{occ.} \\ j, l ~\in~\text{virt.}} } 
+   ( i j | k l)^2 \\
+     \times \left[ 
+ \frac{ 1 } { \epsilon_i - \epsilon_j - \epsilon_l + \epsilon_k }
+\right.  \\ \left.
+    - \frac{ 1 }
+      { \epsilon_j - \epsilon_i + \epsilon_l - \epsilon_k } 
+   \right]
+\end{multline}
+\begin{equation}
+E_1 = 
+ -2 \sum_{ \substack{ i, k ~\in~\text{occ.} \\ j, l ~\in~\text{virt.}} } 
+  \frac{  ( i j | k l)^2 } { \epsilon_i + \epsilon_k - \epsilon_j - \epsilon_l }
+\end{equation}
+
+
+\appendix
+
+\section{SCALAPACK glossary}
+
+
+\begin{table*}[h!]
+\begin{tabular}{ll}
+\texttt{PDAXPY}  &   Add one vector to another one \\
+\texttt{PDCOPY}  &   Copy one vector into another one \\
+\texttt{PDSCAL}  &   Multiply one vector by a scalar \\
+\texttt{PDSCAL}  &   Multiply one vector by a scalar \\
+\\
+\texttt{PDLACPY} &   Copy a matrix into another one \\
+\texttt{PDTRAN}  &   Transpose a matrix \\
+\texttt{PDELSET} &   Set the value of one particular element in the matrix \\
+\texttt{PDELGET} &   Obtain the value of one particular element in the matrix \\
+\texttt{PDGEMR2D}&   Change the matrix distribution \\
+\\
+\texttt{PDTRADD} &   Matrix matrix addition when both are triangular \\
+\texttt{PDTRMM}  &   Matrix-matrix multiplication when one is triangular \\
+\texttt{PDTRMV}  &   Matrix-vector multiplication when one is triangular \\
+\\
+\texttt{PDGEADD} &   Matrix matrix addition: general case \\
+\texttt{PDGEMM}  &   Matrix-matrix multiplication: general case \\
+\texttt{PDGEMV}  &   Matrix-vector multiplication: general case \\
+\\
+\texttt{PDSYMM}  &   Matrix-matrix multiplication: when one is symmetric \\
+\texttt{PDSYMV}  &   Matrix-vector multiplication: when one is symmetric \\
+\end{tabular}
+\end{table*}
+
+\end{document}
+
+
+
+
+
+
+
+

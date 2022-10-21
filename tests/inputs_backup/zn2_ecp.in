@@ -1,0 +1,15 @@
+&molgw
+ scf='pbe'
+
+ ecp_basis='cc-pVDZ-PP'
+ ecp_auxil_basis='cc-pVDZ-PP-RI'
+
+ ecp_type='PP'
+ ecp_elements='Zn'
+ ecp_quality='high'
+
+ natom=2
+/
+30  0. 0. 0.
+30  3. 0. 0.
+

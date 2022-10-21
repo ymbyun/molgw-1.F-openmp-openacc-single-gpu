@@ -1,0 +1,19 @@
+&molgw
+ basis_path='../../basis/'
+ scf='pbe0'
+ tolscf=1.0e-10
+
+ postscf='gw'
+ basis='cc-pVDZ'
+ auxil_basis='cc-pVDZ-RI'
+ frozencore='yes'
+ dft_core=5
+ selfenergy_state_range=3
+
+ natom=5
+/
+14           .000000     .000000     .000000
+1            .856135     .856135     .856135
+1           -.856135    -.856135     .856135
+1           -.856135     .856135    -.856135
+1            .856135    -.856135    -.856135
