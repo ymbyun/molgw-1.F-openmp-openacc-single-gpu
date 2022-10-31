@@ -2,6 +2,8 @@
 # MOLGW 1.F with OpenMP and OpenACC (Single GPU)
 ------------------------------------------------
 
+Multi-platform shared-memory (thread-based) parallelized MOLGW
+
 ## OpenMP (CPU) and OpenACC (GPU) implementations
 
 Hi there!
