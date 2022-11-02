@@ -14,7 +14,7 @@ For now, the OpenACC version of MOLGW runs only on a single GPU.
 Currently, I'm working on a few things:
 
 - A manual for how to compile OpenMP and OpenACC versions
-- A paper for OpenMP and OpenACC implementations
+- A paper for OpenMP and OpenACC implementations (https://arxiv.org/abs/2210.17093)
 - Multi-GPU support
 
 Please let me know if you have any questions. :)
