@@ -1,0 +1,77 @@
+#OPENMP=
+#OPENMP= -qopenmp
+#OPENMP= -fast
+#OPENMP= -fast -acc -ta=tesla
+#OPENMP= -fast -acc -ta=tesla:managed
+#OPENMP= -fast -acc -gpu=managed -gpu=cc86
+#OPENMP= -fast -acc -gpu=managed -gpu=cc89
+OPENMP= -fast -acc -gpu=cc86,cc89,lineinfo,managed
+#OPENMP= -fast -mp
+#OPENMP= -fast -mp -acc -ta=tesla
+#OPENMP= -fast -mp -acc -ta=tesla:managed
+#OPENMP= -fast -mp -acc -gpu=cc86,cc89,lineinfo,managed
+PYTHON=python3
+#LIBTOOL=libtool --mode=link --tag=FC
+LIBTOOL=
+
+# Parallel MPI SCALAPACK compilation
+#FC=ftn -fpp
+#FC=mpif90 -fpp
+#FC=ifort -fpp
+#FC=pgf90
+FC=nvfortran
+
+#CPPFLAGS= -DHAVE_LIBXC -DHAVE_LIBINT_ONEBODY -DHAVE_MPI -DHAVE_SCALAPACK -DENABLE_LIBXC_ALPHA -DENABLE_YMBYUN
+CPPFLAGS= -DHAVE_LIBXC -DHAVE_LIBINT_ONEBODY -DENABLE_YMBYUN #-DENABLE_TIME #-DENABLE_LIBXC_ALPHA -DENABLE_OPENMP_AFFINITY
+
+#CXX=icpc
+#CXX=pgc++
+CXX=nvc++
+#FCOPTS= -O3 -xhost -qopt-matmul
+#FCOPTS= -O2 -xHost
+#FCOPTS= -O2 -xHost -qopt-matmul
+#FCOPTS= -O2 -xHost -qopt-matmul -g
+#FCOPTS= -fast -Minfo
+#FCOPTS= -Minfo
+FCOPTS= -Minfo=accel -Mpreprocess
+#FCOPTS= -O2
+#FCOPTS= -O2 -xCOMMON-AVX512
+#FCOPTS= -O2 -xMIC-AVX512
+#FCOPTS= -O2 -qopt-matmul
+#FCOPTS= -O2 -qopt-matmul -xCOMMON-AVX512 
+#FCOPTS= -O2 -qopt-matmul -xMIC-AVX512
+#CXXOPTS= -O3 -xhost
+#CXXOPTS= -O2 -xHost
+#CXXOPTS= -O2 -xHost -g
+#CXXOPTS= -fast -Minfo
+#CXXOPTS= -Minfo
+CXXOPTS= -Minfo=accel -Mpreprocess
+#CXXOPTS= -O2
+#CXXOPTS= -O2 -xCOMMON-AVX512
+#CXXOPTS= -O2 -xMIC-AVX512
+
+#LAPACK= -mkl=sequential
+#LAPACK= ${MKLROOT}/lib/intel64/libmkl_scalapack_lp64.a -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_sequential.a ${MKLROOT}/lib/intel64/libmkl_core.a ${MKLROOT}/lib/intel64/libmkl_blacs_intelmpi_lp64.a -Wl,--end-group -lpthread -limf -ldl #-lm -ldl
+#LAPACK= -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_intel_thread.a ${MKLROOT}/lib/intel64/libmkl_core.a -Wl,--end-group -liomp5 -lpthread -limf -ldl #-lm -ldl
+#LAPACK= -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_sequential.a ${MKLROOT}/lib/intel64/libmkl_core.a -Wl,--end-group -lpthread -lm -ldl
+LAPACK= -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_pgi_thread.a ${MKLROOT}/lib/intel64/libmkl_core.a -Wl,--end-group -pgf90libs -mp -lpthread -lm -ldl
+
+#SCALAPACK= -L${MKLROOT}/lib/intel64 -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lmkl_blacs_openmpi_lp64 -lpthread -lm
+
+#LIBXC_ROOT=${HOME}/programs/libxc-3.0.0-EXX.alpha.o-intel
+#LIBXC_ROOT=/apps/ymbyun/libxc-3.0.0-EXX.alpha.o-intel
+LIBXC_ROOT=/apps/ymbyun/libxc-3.0.0-EXX.alpha.o-pgi
+#LIBXC_ROOT=${HOME}/programs/libxc-3.0.0-EXX.alpha.x-pgi
+#LIBXC_ROOT=${HOME}/programs/libxc-3.0.0-EXX.alpha.x-intel
+#LIBXC_ROOT=/opt/libxc-3.0.0-EXX.alpha.o-intel
+#LIBXC_ROOT=${HOME}/programs/libxc-3.0.0-EXX.alpha.o-intel
+#LIBXC_ROOT=${HOME}/programs/libxc-3.0.0-EXX.alpha.o-intel-cori.haswell
+
+#LIBINT_ROOT=${HOME}/programs/libint-2.2.0-gnu-N17.O1-KNL
+#LIBINT_ROOT=${HOME}/programs/libint-2.2.0-intel-N17.O1-KNL
+LIBINT_ROOT=/apps/ymbyun/libint-2.2.0-gnu-N17.O1
+#LIBINT_ROOT=${HOME}/programs/libint-2.2.0-gnu-N17.O1
+#LIBINT_ROOT=/apps/ymbyun/libint-2.2.0-intel-N17.O1
+#LIBINT_ROOT=/opt/libint-2.2.0-intel-N17.O1
+#LIBINT_ROOT=${HOME}/programs/libint-2.2.0-intel-N17.O1
+#LIBINT_ROOT=${HOME}/programs/libint-2.2.0-intel-N17.O1-cori.haswell

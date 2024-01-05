@@ -1,0 +1,2316 @@
+ ======================================================================
+
+
+            Welcome to the fascinating world of MOLGW
+
+                        version 1.F
+
+
+ ======================================================================
+
+ MOLGW commit git SHA: Stopping at filesystem boundary (GIT_DIS
+
+ Today is 09/23/2019
+ It is now 21:58
+ And it is perfect time to work
+
+ Linking options:
+ Running with LIBXC
+ Running with MPI
+ Running with SCALAPACK
+ Running with LIBINT (to calculate the Coulomb integrals)
+      max angular momentum handled by your LIBINT compilation:     7   k
+ Using LIBINT for the one-body parts of the Hamiltonian as well
+ 
+ 
+ Opening input file: molgw.in
+
+  === Echo the entire list of input variables  ===
+
+                      scf      pt2                     
+                  postscf                              
+              move_nuclei      no                                                                                                  
+                    nstep        50
+                 tolforce    1.00000000E-05
+             alpha_hybrid    0.00000000E+00
+              beta_hybrid    0.00000000E+00
+             gamma_hybrid    1.00000000E+06
+                    basis      cc-pVDZ                                                                                             
+              auxil_basis      cc-pVDZ-RI                                                                                          
+               basis_path      /home/ybyun/programs/molgw-1.F-2019.03.20-N17.O1/basis/                                             
+              small_basis                                                                                                          
+          ecp_small_basis                                                                                                          
+            gaussian_type      pure
+                    nspin         1
+                   charge    0.00000000E+00
+            magnetization    0.00000000E+00
+              temperature    0.00000000E+00
+             grid_quality      high        
+       tddft_grid_quality      high        
+         integral_quality      high        
+         partition_scheme      ssf         
+                     nscf       100
+             alpha_mixing    5.00000000E-01
+            mixing_scheme      simple      
+              diis_switch    5.00000000E-02
+    level_shifting_energy    0.00000000E+00
+         init_hamiltonian      guess       
+                   tolscf    1.00000000E-07
+              min_overlap    1.00000000E-10
+              npulay_hist         6
+                      tda      no 
+                  triplet      no 
+              nexcitation         0
+                   toldav    1.00000000E-04
+               frozencore      no 
+                   ncoreg         0
+                   ncorew         0
+                nvirtualg    100000
+                nvirtualw    100000
+              nvirtualspa    100000
+              nomega_imag         0
+     selfenergy_state_min         1
+     selfenergy_state_max    100000
+   selfenergy_state_range    100000
+             nomega_sigma        51
+               step_sigma    1.00000000E-02
+           ignore_restart      no 
+        ignore_bigrestart      no 
+             print_matrix      no 
+                print_eri      no 
+                print_wfn      no 
+               print_cube      no 
+                  print_w      no 
+            print_restart      yes
+         print_bigrestart      yes
+              print_sigma      no 
+               print_pdos      no 
+          print_multipole      no 
+              length_unit      angstrom    
+                    natom         1
+                 xyz_file                                                                                                          
+                   nghost         0
+                      eta    1.00000000E-03
+                  scissor    0.00000000E+00
+              grid_memory    4.00000000E+02
+      scalapack_block_min       400
+          scalapack_nprow         1
+          scalapack_npcol         1
+          mpi_nproc_ortho         1
+             alpha_cohsex    1.00000000E+00
+              beta_cohsex    1.00000000E+00
+                 dft_core         0
+             gamma_cohsex    0.00000000E+00
+             delta_cohsex    0.00000000E+00
+           epsilon_cohsex    0.00000000E+00
+              virtual_fno      no 
+                rcut_mbpt    1.00000000E+00
+            gwgamma_tddft      no 
+                 ecp_type                                                                                                          
+             ecp_elements                                                                                                          
+              ecp_quality      high        
+                ecp_basis                                                                                                          
+          ecp_auxil_basis                                                                                                          
+
+  ================================================
+
+
+ Summary of the input parameters 
+
+       Calculation type:   PT2                                                                                                 
+               SCF type:   PT2                                                                                                 
+          Post SCF type:   None                                                                                                
+                  Natom:   1
+                  Nghost:  0
+              Electrons:   4.0000
+                 Charge:   0.0000
+          Magnetization:   0.0000
+              Basis set:   cc-pVDZ                                                                                             
+    Auxiliary basis set:   cc-pVDZ-RI                                                                                          
+          Gaussian type:   PURE
+         Basis file path:  /home/ybyun/programs/molgw-1.F-2019.03.20-N17.O1/basis/                                             
+      Spin polarization:   1
+              SCF steps: 100
+                 Mixing:   0.5000
+           Grid quality:   HIGH        
+       Integral quality:   HIGH        
+ 
+        IO options:
+        - matrices details:     F
+        - ERI file:             F
+        - ignore big RESTART:   F
+        - plot some wfns:       F
+        - dump spectral functs  F
+        - dump self-energy      F
+        - RESTART files         T
+        - big RESTART file      T
+
+ ================================
+       Atom list
+                        bohr                                        angstrom
+ atom    1  Be:      0.000000     0.000000     0.000000           0.000000     0.000000     0.000000
+ ================================
+
+ Number of bonds     0
+ Molecule has inversion symmetry
+ Molecule is linear
+ 
+
+ ==== MPI info
+                                   Number of proc:      8
+                                   nproc_grid:          8
+                                   nproc_auxil:         8
+                                   nproc_ortho:         1
+                                   Master proc is:      0
+                      Parallelize auxiliary basis:      T
+                       Parallelize XC grid points:      T
+                                    Use SCALAPACK:      T
+                         Parallel using a buffer :      T
+
+
+
+ Setting up the cartesian to pure transforms up to l=  7
+ Transformations set up completed for both CARTESIAN and PURE Gaussians
+ 
+ Setting up the basis set for wavefunctions
+ 
+                  Total number of basis functions:      14
+                  Total number of cart. functions:      15
+                                 Number of shells:       6
+        Maximum angular momentum in the basis set:       2
+                                                         d
+ Basis set is fit and ready
+
+
+ Tolerance on integrals set to  1.00E-08
+
+ Cauchy-Schwartz screening of the 3- or 4-center integrals
+
+ Non negligible shellpairs to be computed      21  over a total of      21
+ Saving (%):       0.0000
+   Allocate:                          index pair,  Mem:   +0.001 (Mb),  Total Mem:    0.001 (Mb)
+   Allocate:                         index basis,  Mem:   +0.001 (Mb),  Total Mem:    0.002 (Mb)
+
+ Setting up the auxiliary basis set for Coulomb integrals
+ 
+                  Total number of basis functions:      56
+                  Total number of cart. functions:      66
+                                 Number of shells:      18
+        Maximum angular momentum in the basis set:       3
+                                                         f
+ Basis set is fit and ready
+
+ 2-center integrals distributed using a SCALAPACK grid (LIBINT):    2 x    4
+   Allocate:              tmp 2-center integrals,  Mem:   +0.008 (Mb),  Total Mem:    0.009 (Mb)
+   Allocate:             2-center integrals sqrt,  Mem:   +0.008 (Mb),  Total Mem:    0.017 (Mb)
+ Deallocate:              tmp 2-center integrals,  Mem:   -0.008 (Mb),  Total Mem:    0.009 (Mb)
+
+ SCALAPACK block size for auxiliary basis:    1
+
+ Distribute auxiliary basis functions among processors
+ Max auxiliary basis functions    7 for processor      1
+ Min auxiliary basis functions    7 for processor      1
+   Allocate:      Distributed 2-center integrals,  Mem:   +0.008 (Mb),  Total Mem:    0.017 (Mb)
+   Allocate:              tmp 2-center integrals,  Mem:   +0.008 (Mb),  Total Mem:    0.025 (Mb)
+ Deallocate:              tmp 2-center integrals,  Mem:   -0.008 (Mb),  Total Mem:    0.017 (Mb)
+ Deallocate:             2-center integrals sqrt,  Mem:   -0.008 (Mb),  Total Mem:    0.009 (Mb)
+
+ All 2-center integrals have been calculated, diagonalized and stored
+ Some have been eliminated due to too large overlap      0
+ because their eigenvalue was lower than:    1.000000E-06
+
+ Calculate and store all the 3-center Electron Repulsion Integrals (LIBINT 3center)
+ 3-center integrals distributed using a SCALAPACK grid:    2 x    4
+   Allocate:              TMP 3-center integrals,  Mem:   +0.008 (Mb),  Total Mem:    0.017 (Mb)
+   Allocate:        3-center integrals SCALAPACK,  Mem:   +0.008 (Mb),  Total Mem:    0.025 (Mb)
+ Final 3-center integrals distributed using a SCALAPACK grid:        8 x    1
+ Deallocate:              TMP 3-center integrals,  Mem:   -0.008 (Mb),  Total Mem:    0.017 (Mb)
+ Deallocate:      Distributed 2-center integrals,  Mem:   -0.008 (Mb),  Total Mem:    0.009 (Mb)
+   Allocate:                  3-center integrals,  Mem:   +0.006 (Mb),  Total Mem:    0.015 (Mb)
+ Deallocate:        3-center integrals SCALAPACK,  Mem:   -0.008 (Mb),  Total Mem:    0.007 (Mb)
+
+ All 3-center integrals have been calculated and stored
+   Allocate:                    Overlap matrix S,  Mem:   +0.001 (Mb),  Total Mem:    0.009 (Mb)
+   Allocate:                  Kinetic operator T,  Mem:   +0.001 (Mb),  Total Mem:    0.010 (Mb)
+   Allocate:                  Nucleus operator V,  Mem:   +0.001 (Mb),  Total Mem:    0.012 (Mb)
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.013 (Mb)
+
+ Setup overlap matrix S (LIBINT)
+
+ Calculate overlap matrix square-root S^{1/2}
+   Allocate:               Overlap sqrt S^{-1/2},  Mem:   +0.001 (Mb),  Total Mem:    0.015 (Mb)
+
+ Filtering basis functions that induce overcompleteness
+   Lowest S eigenvalue is            3.87E-02
+   Tolerance on overlap eigenvalues  1.00E-10
+   Retaining    14 among    14
+   Allocate:                     Wavefunctions C,  Mem:   +0.001 (Mb),  Total Mem:    0.016 (Mb)
+
+ === Occupations ===
+   1      2.00000
+   2      2.00000
+   3      0.00000
+   4      0.00000
+   5      0.00000
+   6      0.00000
+   7      0.00000
+ 
+ (ymbyun) HOMO:        2
+ (ymbyun) LUMO:        3
+
+ No RESTART file found
+
+ Setup kinetic part of the Hamiltonian (LIBINT)
+
+ Setup nucleus-electron part of the Hamiltonian (LIBINT)
+   Parallelizing over atoms
+   this proc treats     1 over     1
+
+ WARNING: RESTART file has been ignored, since it does not contain the required empty states
+
+ Calculate approximate HXC potential with a superposition of atomic densities
+ Simple LDA functional on a coarse grid
+
+ Initializing the distribution of the quadrature grid points
+
+ Distributing the grid among procs
+ Maximum number of grid points for a single proc          47
+
+ Distribute work load among procs
+ Avg. tasks per cpu:    46.25
+ proc # , grid points     0 ,         47
+
+ Setup the DFT quadrature
+ discretization grid per atom [radial , angular max - angular min]   25   26    6
+ total number of real-space points for this processor      47
+
+ Number of electrons:      4.000000
+      XC energy (Ha):     -1.819234
+
+ Approximate hamiltonian
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+ Deallocate:                          index pair,  Mem:   -0.001 (Mb),  Total Mem:    0.015 (Mb)
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.014 (Mb)
+
+ SCALAPACK info: size of the local matrix for proc #    14 x     14         0
+   Allocate:                 Hamiltonian history,  Mem:   +0.003 (Mb),  Total Mem:    0.017 (Mb)
+   Allocate:              Density matrix history,  Mem:   +0.001 (Mb),  Total Mem:    0.018 (Mb)
+   Allocate:                 Total Hamiltonian H,  Mem:   +0.001 (Mb),  Total Mem:    0.020 (Mb)
+   Allocate:                Hartree potential Vh,  Mem:   +0.001 (Mb),  Total Mem:    0.021 (Mb)
+   Allocate:              Exchange operator Sigx,  Mem:   +0.001 (Mb),  Total Mem:    0.023 (Mb)
+   Allocate:                     XC operator Vxc,  Mem:   +0.001 (Mb),  Total Mem:    0.024 (Mb)
+   Allocate:                    Density matrix P,  Mem:   +0.001 (Mb),  Total Mem:    0.026 (Mb)
+ Build density matrix
+
+-------------------------------------------
+ *** SCF cycle No:    1
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.71517   -128.30623      2.0000
+   2k     -0.30589     -8.32359      2.0000
+  -----------------------------
+   3k      0.06181      1.68206      0.0000
+   4k      0.06181      1.68206      0.0000
+   5k      0.06181      1.68206      0.0000
+   6k      0.30064      8.18081      0.0000
+   7k      0.35595      9.68591      0.0000
+   8k      0.35595      9.68591      0.0000
+   9k      0.35595      9.68591      0.0000
+  10k      0.65591     17.84818      0.0000
+  11k      0.65591     17.84818      0.0000
+  12k      0.65591     17.84818      0.0000
+  13k      0.65591     17.84818      0.0000
+  14k      0.65591     17.84818      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.323591
+ gKS LUMO energy    (eV):       1.682065
+ gKS HOMO-LUMO gap  (eV):      10.005655
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.6523310131
+    Nucleus Energy  (Ha):      -33.7534708919
+    Hartree Energy  (Ha):        7.2116656037
+    Exchange Energy (Ha):       -2.6814579378
+
+    Total Energy    (Ha):      -14.5709322129
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.17213E-01
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    2
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.72205   -128.49364      2.0000
+   2k     -0.30710     -8.35668      2.0000
+  -----------------------------
+   3k      0.06045      1.64483      0.0000
+   4k      0.06045      1.64483      0.0000
+   5k      0.06045      1.64483      0.0000
+   6k      0.29995      8.16209      0.0000
+   7k      0.35367      9.62397      0.0000
+   8k      0.35367      9.62397      0.0000
+   9k      0.35367      9.62397      0.0000
+  10k      0.65393     17.79428      0.0000
+  11k      0.65393     17.79428      0.0000
+  12k      0.65393     17.79428      0.0000
+  13k      0.65393     17.79428      0.0000
+  14k      0.65393     17.79428      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.356676
+ gKS LUMO energy    (eV):       1.644833
+ gKS HOMO-LUMO gap  (eV):      10.001509
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5833790064
+    Nucleus Energy  (Ha):      -33.6537789842
+    Hartree Energy  (Ha):        7.1673057146
+    Exchange Energy (Ha):       -2.6693602825
+
+    Total Energy    (Ha):      -14.5724545456
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.22979E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    3
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.72618   -128.60596      2.0000
+   2k     -0.30785     -8.37704      2.0000
+  -----------------------------
+   3k      0.05960      1.62180      0.0000
+   4k      0.05960      1.62180      0.0000
+   5k      0.05960      1.62180      0.0000
+   6k      0.29952      8.15048      0.0000
+   7k      0.35229      9.58634      0.0000
+   8k      0.35229      9.58634      0.0000
+   9k      0.35229      9.58634      0.0000
+  10k      0.65270     17.76097      0.0000
+  11k      0.65270     17.76097      0.0000
+  12k      0.65270     17.76097      0.0000
+  13k      0.65270     17.76097      0.0000
+  14k      0.65270     17.76097      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.377037
+ gKS LUMO energy    (eV):       1.621798
+ gKS HOMO-LUMO gap  (eV):       9.998835
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5788908525
+    Nucleus Energy  (Ha):      -33.6460202908
+    Hartree Energy  (Ha):        7.1631120066
+    Exchange Energy (Ha):       -2.6684536849
+
+    Total Energy    (Ha):      -14.5724711167
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.97572E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    4
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.72866   -128.67348      2.0000
+   2k     -0.30831     -8.38956      2.0000
+  -----------------------------
+   3k      0.05908      1.60757      0.0000
+   4k      0.05908      1.60757      0.0000
+   5k      0.05908      1.60757      0.0000
+   6k      0.29926      8.14326      0.0000
+   7k      0.35145      9.56341      0.0000
+   8k      0.35145      9.56341      0.0000
+   9k      0.35145      9.56341      0.0000
+  10k      0.65195     17.74040      0.0000
+  11k      0.65195     17.74040      0.0000
+  12k      0.65195     17.74040      0.0000
+  13k      0.65195     17.74040      0.0000
+  14k      0.65195     17.74040      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.389556
+ gKS LUMO energy    (eV):       1.607568
+ gKS HOMO-LUMO gap  (eV):       9.997123
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5762449916
+    Nucleus Energy  (Ha):      -33.6413699587
+    Hartree Energy  (Ha):        7.1605604341
+    Exchange Energy (Ha):       -2.6679125569
+
+    Total Energy    (Ha):      -14.5724770899
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.21263E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    5
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.73016   -128.71419      2.0000
+   2k     -0.30859     -8.39725      2.0000
+  -----------------------------
+   3k      0.05875      1.59878      0.0000
+   4k      0.05875      1.59878      0.0000
+   5k      0.05875      1.59878      0.0000
+   6k      0.29909      8.13877      0.0000
+   7k      0.35093      9.54942      0.0000
+   8k      0.35093      9.54942      0.0000
+   9k      0.35093      9.54942      0.0000
+  10k      0.65148     17.72770      0.0000
+  11k      0.65148     17.72770      0.0000
+  12k      0.65148     17.72770      0.0000
+  13k      0.65148     17.72770      0.0000
+  14k      0.65148     17.72770      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.397250
+ gKS LUMO energy    (eV):       1.598784
+ gKS HOMO-LUMO gap  (eV):       9.996034
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5746787713
+    Nucleus Energy  (Ha):      -33.6385750619
+    Hartree Energy  (Ha):        7.1590055288
+    Exchange Energy (Ha):       -2.6675885084
+
+    Total Energy    (Ha):      -14.5724792702
+
+ Build density matrix
+ Convergence criterium on the density matrix   7.45911E-03
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    6
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05257650
+ SOX diagram     :    0.02624546
+ MP2 correlation :   -0.02633104
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0263310408
+ 
+ MP2 Total Energy (Ha):       -14.5988103111
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.67955   -127.33710      2.0000
+   2k     -0.31715     -8.63020      2.0000
+  -----------------------------
+   3k      0.05031      1.36892      0.0000
+   4k      0.05031      1.36892      0.0000
+   5k      0.05031      1.36892      0.0000
+   6k      0.28414      7.73174      0.0000
+   7k      0.33326      9.06838      0.0000
+   8k      0.33326      9.06838      0.0000
+   9k      0.33326      9.06838      0.0000
+  10k      0.63003     17.14406      0.0000
+  11k      0.63003     17.14406      0.0000
+  12k      0.63003     17.14406      0.0000
+  13k      0.63003     17.14406      0.0000
+  14k      0.63003     17.14406      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.630201
+ gKS LUMO energy    (eV):       1.368923
+ gKS HOMO-LUMO gap  (eV):       9.999124
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5737477993
+    Nucleus Energy  (Ha):      -33.6368905369
+    Hartree Energy  (Ha):        7.1580564800
+    Exchange Energy (Ha):       -2.6673938167
+
+    Total Energy    (Ha):      -14.5724800743
+
+ Build density matrix
+ Convergence criterium on the density matrix   8.35382E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    7
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05377633
+ SOX diagram     :    0.02684470
+ MP2 correlation :   -0.02693162
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0269316242
+ 
+ MP2 Total Energy (Ha):       -14.5994116986
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.65237   -126.59742      2.0000
+   2k     -0.32131     -8.74323      2.0000
+  -----------------------------
+   3k      0.04625      1.25845      0.0000
+   4k      0.04625      1.25845      0.0000
+   5k      0.04625      1.25845      0.0000
+   6k      0.27692      7.53546      0.0000
+   7k      0.32514      8.84746      0.0000
+   8k      0.32514      8.84746      0.0000
+   9k      0.32514      8.84746      0.0000
+  10k      0.62281     16.94754      0.0000
+  11k      0.62281     16.94754      0.0000
+  12k      0.62281     16.94754      0.0000
+  13k      0.62281     16.94754      0.0000
+  14k      0.62281     16.94754      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.743225
+ gKS LUMO energy    (eV):       1.258454
+ gKS HOMO-LUMO gap  (eV):      10.001679
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5794267664
+    Nucleus Energy  (Ha):      -33.6501236016
+    Hartree Energy  (Ha):        7.1671000045
+    Exchange Energy (Ha):       -2.6688543772
+
+    Total Energy    (Ha):      -14.5724512079
+
+ Build density matrix
+ Convergence criterium on the density matrix   6.97756E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    8
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05440135
+ SOX diagram     :    0.02715688
+ MP2 correlation :   -0.02724447
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0272444697
+ 
+ MP2 Total Energy (Ha):       -14.5996956776
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.63743   -126.19089      2.0000
+   2k     -0.32320     -8.79469      2.0000
+  -----------------------------
+   3k      0.04452      1.21157      0.0000
+   4k      0.04452      1.21157      0.0000
+   5k      0.04452      1.21157      0.0000
+   6k      0.27353      7.44309      0.0000
+   7k      0.32162      8.75167      0.0000
+   8k      0.32162      8.75167      0.0000
+   9k      0.32162      8.75167      0.0000
+  10k      0.62031     16.87949      0.0000
+  11k      0.62031     16.87949      0.0000
+  12k      0.62031     16.87949      0.0000
+  13k      0.62031     16.87949      0.0000
+  14k      0.62031     16.87949      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.794689
+ gKS LUMO energy    (eV):       1.211567
+ gKS HOMO-LUMO gap  (eV):      10.006256
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5846873662
+    Nucleus Energy  (Ha):      -33.6616380889
+    Hartree Energy  (Ha):        7.1746982262
+    Exchange Energy (Ha):       -2.6701421269
+
+    Total Energy    (Ha):      -14.5723946234
+
+ Build density matrix
+ Convergence criterium on the density matrix   5.09926E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    9
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05471427
+ SOX diagram     :    0.02731318
+ MP2 correlation :   -0.02740109
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0274010944
+ 
+ MP2 Total Energy (Ha):       -14.5997957178
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.62905   -125.96298      2.0000
+   2k     -0.32398     -8.81590      2.0000
+  -----------------------------
+   3k      0.04392      1.19508      0.0000
+   4k      0.04392      1.19508      0.0000
+   5k      0.04392      1.19508      0.0000
+   6k      0.27199      7.40134      0.0000
+   7k      0.32024      8.71417      0.0000
+   8k      0.32024      8.71417      0.0000
+   9k      0.32024      8.71417      0.0000
+  10k      0.61953     16.85831      0.0000
+  11k      0.61953     16.85831      0.0000
+  12k      0.61953     16.85831      0.0000
+  13k      0.61953     16.85831      0.0000
+  14k      0.61953     16.85831      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.815900
+ gKS LUMO energy    (eV):       1.195075
+ gKS HOMO-LUMO gap  (eV):      10.010975
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5886954370
+    Nucleus Energy  (Ha):      -33.6701633065
+    Hartree Energy  (Ha):        7.1802339090
+    Exchange Energy (Ha):       -2.6711022519
+
+    Total Energy    (Ha):      -14.5723362126
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.44993E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   10
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05486531
+ SOX diagram     :    0.02738862
+ MP2 correlation :   -0.02747669
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0274766910
+ 
+ MP2 Total Energy (Ha):       -14.5998129035
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.62428   -125.83318      2.0000
+   2k     -0.32424     -8.82309      2.0000
+  -----------------------------
+   3k      0.04379      1.19166      0.0000
+   4k      0.04379      1.19166      0.0000
+   5k      0.04379      1.19166      0.0000
+   6k      0.27134      7.38363      0.0000
+   7k      0.31981      8.70240      0.0000
+   8k      0.31981      8.70240      0.0000
+   9k      0.31981      8.70240      0.0000
+  10k      0.61938     16.85432      0.0000
+  11k      0.61938     16.85432      0.0000
+  12k      0.61938     16.85432      0.0000
+  13k      0.61938     16.85432      0.0000
+  14k      0.61938     16.85432      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.823094
+ gKS LUMO energy    (eV):       1.191658
+ gKS HOMO-LUMO gap  (eV):      10.014752
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5914686952
+    Nucleus Energy  (Ha):      -33.6759654161
+    Hartree Energy  (Ha):        7.1839662635
+    Exchange Energy (Ha):       -2.6717585146
+
+    Total Energy    (Ha):      -14.5722889720
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.21695E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   11
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05493548
+ SOX diagram     :    0.02742366
+ MP2 correlation :   -0.02751181
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275118134
+ 
+ MP2 Total Energy (Ha):       -14.5998007854
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.62154   -125.75842      2.0000
+   2k     -0.32429     -8.82434      2.0000
+  -----------------------------
+   3k      0.04384      1.19305      0.0000
+   4k      0.04384      1.19305      0.0000
+   5k      0.04384      1.19305      0.0000
+   6k      0.27110      7.37691      0.0000
+   7k      0.31976      8.70101      0.0000
+   8k      0.31976      8.70101      0.0000
+   9k      0.31976      8.70101      0.0000
+  10k      0.61945     16.85609      0.0000
+  11k      0.61945     16.85609      0.0000
+  12k      0.61945     16.85609      0.0000
+  13k      0.61945     16.85609      0.0000
+  14k      0.61945     16.85609      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.824341
+ gKS LUMO energy    (eV):       1.193053
+ gKS HOMO-LUMO gap  (eV):      10.017394
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5932773723
+    Nucleus Energy  (Ha):      -33.6797092829
+    Hartree Energy  (Ha):        7.1863596228
+    Exchange Energy (Ha):       -2.6721831657
+
+    Total Energy    (Ha):      -14.5722554534
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.37254E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   12
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05496658
+ SOX diagram     :    0.02743920
+ MP2 correlation :   -0.02752738
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275273833
+ 
+ MP2 Total Energy (Ha):       -14.5997828368
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61994   -125.71506      2.0000
+   2k     -0.32426     -8.82343      2.0000
+  -----------------------------
+   3k      0.04394      1.19566      0.0000
+   4k      0.04394      1.19566      0.0000
+   5k      0.04394      1.19566      0.0000
+   6k      0.27102      7.37491      0.0000
+   7k      0.31983      8.70310      0.0000
+   8k      0.31983      8.70310      0.0000
+   9k      0.31983      8.70310      0.0000
+  10k      0.61956     16.85917      0.0000
+  11k      0.61956     16.85917      0.0000
+  12k      0.61956     16.85917      0.0000
+  13k      0.61956     16.85917      0.0000
+  14k      0.61956     16.85917      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.823435
+ gKS LUMO energy    (eV):       1.195662
+ gKS HOMO-LUMO gap  (eV):      10.019097
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5944097213
+    Nucleus Energy  (Ha):      -33.6820358303
+    Hartree Energy  (Ha):        7.1878401674
+    Exchange Energy (Ha):       -2.6724475592
+
+    Total Energy    (Ha):      -14.5722335008
+
+ Build density matrix
+ Convergence criterium on the density matrix   8.25694E-03
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   13
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05497947
+ SOX diagram     :    0.02744563
+ MP2 correlation :   -0.02753384
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275338367
+ 
+ MP2 Total Energy (Ha):       -14.5997673375
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61902   -125.68983      2.0000
+   2k     -0.32420     -8.82203      2.0000
+  -----------------------------
+   3k      0.04403      1.19811      0.0000
+   4k      0.04403      1.19811      0.0000
+   5k      0.04403      1.19811      0.0000
+   6k      0.27102      7.37477      0.0000
+   7k      0.31993      8.70581      0.0000
+   8k      0.31993      8.70581      0.0000
+   9k      0.31993      8.70581      0.0000
+  10k      0.61967     16.86200      0.0000
+  11k      0.61967     16.86200      0.0000
+  12k      0.61967     16.86200      0.0000
+  13k      0.61967     16.86200      0.0000
+  14k      0.61967     16.86200      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.822026
+ gKS LUMO energy    (eV):       1.198110
+ gKS HOMO-LUMO gap  (eV):      10.020136
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5950971902
+    Nucleus Energy  (Ha):      -33.6834405896
+    Hartree Energy  (Ha):        7.1887309469
+    Exchange Energy (Ha):       -2.6726074128
+
+    Total Energy    (Ha):      -14.5722198653
+
+ Build density matrix
+ Convergence criterium on the density matrix   4.85236E-03
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   14
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498423
+ SOX diagram     :    0.02744801
+ MP2 correlation :   -0.02753622
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275362220
+ 
+ MP2 Total Energy (Ha):       -14.5997560873
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61848   -125.67514      2.0000
+   2k     -0.32416     -8.82074      2.0000
+  -----------------------------
+   3k      0.04410      1.20000      0.0000
+   4k      0.04410      1.20000      0.0000
+   5k      0.04410      1.20000      0.0000
+   6k      0.27103      7.37521      0.0000
+   7k      0.32002      8.70815      0.0000
+   8k      0.32002      8.70815      0.0000
+   9k      0.32002      8.70815      0.0000
+  10k      0.61975     16.86414      0.0000
+  11k      0.61975     16.86414      0.0000
+  12k      0.61975     16.86414      0.0000
+  13k      0.61975     16.86414      0.0000
+  14k      0.61975     16.86414      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.820742
+ gKS LUMO energy    (eV):       1.200002
+ gKS HOMO-LUMO gap  (eV):      10.020744
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5955043875
+    Nucleus Energy  (Ha):      -33.6842691096
+    Hartree Energy  (Ha):        7.1892548011
+    Exchange Energy (Ha):       -2.6727017863
+
+    Total Energy    (Ha):      -14.5722117074
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.79508E-03
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   15
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498559
+ SOX diagram     :    0.02744868
+ MP2 correlation :   -0.02753690
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275369022
+ 
+ MP2 Total Energy (Ha):       -14.5997486096
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61816   -125.66661      2.0000
+   2k     -0.32412     -8.81976      2.0000
+  -----------------------------
+   3k      0.04415      1.20133      0.0000
+   4k      0.04415      1.20133      0.0000
+   5k      0.04415      1.20133      0.0000
+   6k      0.27105      7.37574      0.0000
+   7k      0.32008      8.70989      0.0000
+   8k      0.32008      8.70989      0.0000
+   9k      0.32008      8.70989      0.0000
+  10k      0.61980     16.86562      0.0000
+  11k      0.61980     16.86562      0.0000
+  12k      0.61980     16.86562      0.0000
+  13k      0.61980     16.86562      0.0000
+  14k      0.61980     16.86562      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.819757
+ gKS LUMO energy    (eV):       1.201331
+ gKS HOMO-LUMO gap  (eV):      10.021088
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5957405816
+    Nucleus Energy  (Ha):      -33.6847480286
+    Hartree Energy  (Ha):        7.1895568642
+    Exchange Energy (Ha):       -2.6727563793
+
+    Total Energy    (Ha):      -14.5722069621
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.58149E-03
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   16
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498566
+ SOX diagram     :    0.02744872
+ MP2 correlation :   -0.02753694
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275369386
+ 
+ MP2 Total Energy (Ha):       -14.5997439007
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61798   -125.66168      2.0000
+   2k     -0.32409     -8.81907      2.0000
+  -----------------------------
+   3k      0.04418      1.20221      0.0000
+   4k      0.04418      1.20221      0.0000
+   5k      0.04418      1.20221      0.0000
+   6k      0.27107      7.37618      0.0000
+   7k      0.32013      8.71107      0.0000
+   8k      0.32013      8.71107      0.0000
+   9k      0.32013      8.71107      0.0000
+  10k      0.61984     16.86659      0.0000
+  11k      0.61984     16.86659      0.0000
+  12k      0.61984     16.86659      0.0000
+  13k      0.61984     16.86659      0.0000
+  14k      0.61984     16.86659      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.819066
+ gKS LUMO energy    (eV):       1.202212
+ gKS HOMO-LUMO gap  (eV):      10.021278
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5958750679
+    Nucleus Energy  (Ha):      -33.6850199192
+    Hartree Energy  (Ha):        7.1897279793
+    Exchange Energy (Ha):       -2.6727873916
+
+    Total Energy    (Ha):      -14.5722042636
+
+ Build density matrix
+ Convergence criterium on the density matrix   8.80096E-04
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   17
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498534
+ SOX diagram     :    0.02744856
+ MP2 correlation :   -0.02753678
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275367808
+ 
+ MP2 Total Energy (Ha):       -14.5997410444
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61788   -125.65884      2.0000
+   2k     -0.32408     -8.81861      2.0000
+  -----------------------------
+   3k      0.04420      1.20277      0.0000
+   4k      0.04420      1.20277      0.0000
+   5k      0.04420      1.20277      0.0000
+   6k      0.27108      7.37650      0.0000
+   7k      0.32015      8.71184      0.0000
+   8k      0.32015      8.71184      0.0000
+   9k      0.32015      8.71184      0.0000
+  10k      0.61986     16.86720      0.0000
+  11k      0.61986     16.86720      0.0000
+  12k      0.61986     16.86720      0.0000
+  13k      0.61986     16.86720      0.0000
+  14k      0.61986     16.86720      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.818608
+ gKS LUMO energy    (eV):       1.202771
+ gKS HOMO-LUMO gap  (eV):      10.021379
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5959503456
+    Nucleus Energy  (Ha):      -33.6851717141
+    Hartree Energy  (Ha):        7.1898233247
+    Exchange Energy (Ha):       -2.6728047145
+
+    Total Energy    (Ha):      -14.5722027584
+
+ Build density matrix
+ Convergence criterium on the density matrix   4.82017E-04
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   18
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498498
+ SOX diagram     :    0.02744838
+ MP2 correlation :   -0.02753660
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275366019
+ 
+ MP2 Total Energy (Ha):       -14.5997393603
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61782   -125.65722      2.0000
+   2k     -0.32407     -8.81832      2.0000
+  -----------------------------
+   3k      0.04421      1.20312      0.0000
+   4k      0.04421      1.20312      0.0000
+   5k      0.04421      1.20312      0.0000
+   6k      0.27109      7.37672      0.0000
+   7k      0.32017      8.71232      0.0000
+   8k      0.32017      8.71232      0.0000
+   9k      0.32017      8.71232      0.0000
+  10k      0.61987     16.86757      0.0000
+  11k      0.61987     16.86757      0.0000
+  12k      0.61987     16.86757      0.0000
+  13k      0.61987     16.86757      0.0000
+  14k      0.61987     16.86757      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.818316
+ gKS LUMO energy    (eV):       1.203116
+ gKS HOMO-LUMO gap  (eV):      10.021432
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5959918009
+    Nucleus Energy  (Ha):      -33.6852551097
+    Hartree Energy  (Ha):        7.1898756115
+    Exchange Energy (Ha):       -2.6728142360
+
+    Total Energy    (Ha):      -14.5722019333
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.59843E-04
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   19
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498469
+ SOX diagram     :    0.02744824
+ MP2 correlation :   -0.02753646
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275364566
+ 
+ MP2 Total Energy (Ha):       -14.5997383900
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61778   -125.65629      2.0000
+   2k     -0.32406     -8.81813      2.0000
+  -----------------------------
+   3k      0.04422      1.20332      0.0000
+   4k      0.04422      1.20332      0.0000
+   5k      0.04422      1.20332      0.0000
+   6k      0.27109      7.37685      0.0000
+   7k      0.32018      8.71261      0.0000
+   8k      0.32018      8.71261      0.0000
+   9k      0.32018      8.71261      0.0000
+  10k      0.61988     16.86779      0.0000
+  11k      0.61988     16.86779      0.0000
+  12k      0.61988     16.86779      0.0000
+  13k      0.61988     16.86779      0.0000
+  14k      0.61988     16.86779      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.818135
+ gKS LUMO energy    (eV):       1.203324
+ gKS HOMO-LUMO gap  (eV):      10.021459
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960142671
+    Nucleus Energy  (Ha):      -33.6853002037
+    Hartree Energy  (Ha):        7.1899038348
+    Exchange Energy (Ha):       -2.6728193868
+
+    Total Energy    (Ha):      -14.5722014886
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.37817E-04
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   20
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498449
+ SOX diagram     :    0.02744813
+ MP2 correlation :   -0.02753635
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275363534
+ 
+ MP2 Total Energy (Ha):       -14.5997378420
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61776   -125.65577      2.0000
+   2k     -0.32406     -8.81803      2.0000
+  -----------------------------
+   3k      0.04423      1.20345      0.0000
+   4k      0.04423      1.20345      0.0000
+   5k      0.04423      1.20345      0.0000
+   6k      0.27110      7.37694      0.0000
+   7k      0.32019      8.71278      0.0000
+   8k      0.32019      8.71278      0.0000
+   9k      0.32019      8.71278      0.0000
+  10k      0.61988     16.86792      0.0000
+  11k      0.61988     16.86792      0.0000
+  12k      0.61988     16.86792      0.0000
+  13k      0.61988     16.86792      0.0000
+  14k      0.61988     16.86792      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.818026
+ gKS LUMO energy    (eV):       1.203446
+ gKS HOMO-LUMO gap  (eV):      10.021472
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960262456
+    Nucleus Energy  (Ha):      -33.6853241943
+    Hartree Energy  (Ha):        7.1899188240
+    Exchange Energy (Ha):       -2.6728221282
+
+    Total Energy    (Ha):      -14.5722012528
+
+ Build density matrix
+ Convergence criterium on the density matrix   7.18495E-05
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   21
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498435
+ SOX diagram     :    0.02744806
+ MP2 correlation :   -0.02753629
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275362852
+ 
+ MP2 Total Energy (Ha):       -14.5997375381
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61775   -125.65548      2.0000
+   2k     -0.32405     -8.81796      2.0000
+  -----------------------------
+   3k      0.04423      1.20352      0.0000
+   4k      0.04423      1.20352      0.0000
+   5k      0.04423      1.20352      0.0000
+   6k      0.27110      7.37699      0.0000
+   7k      0.32019      8.71289      0.0000
+   8k      0.32019      8.71289      0.0000
+   9k      0.32019      8.71289      0.0000
+  10k      0.61989     16.86800      0.0000
+  11k      0.61989     16.86800      0.0000
+  12k      0.61989     16.86800      0.0000
+  13k      0.61989     16.86800      0.0000
+  14k      0.61989     16.86800      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817961
+ gKS LUMO energy    (eV):       1.203516
+ gKS HOMO-LUMO gap  (eV):      10.021478
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960325242
+    Nucleus Energy  (Ha):      -33.6853367410
+    Hartree Energy  (Ha):        7.1899266493
+    Exchange Energy (Ha):       -2.6728235625
+
+    Total Energy    (Ha):      -14.5722011300
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.67588E-05
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   22
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498426
+ SOX diagram     :    0.02744802
+ MP2 correlation :   -0.02753624
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275362424
+ 
+ MP2 Total Energy (Ha):       -14.5997373725
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61775   -125.65532      2.0000
+   2k     -0.32405     -8.81792      2.0000
+  -----------------------------
+   3k      0.04423      1.20356      0.0000
+   4k      0.04423      1.20356      0.0000
+   5k      0.04423      1.20356      0.0000
+   6k      0.27110      7.37702      0.0000
+   7k      0.32019      8.71294      0.0000
+   8k      0.32019      8.71294      0.0000
+   9k      0.32019      8.71294      0.0000
+  10k      0.61989     16.86804      0.0000
+  11k      0.61989     16.86804      0.0000
+  12k      0.61989     16.86804      0.0000
+  13k      0.61989     16.86804      0.0000
+  14k      0.61989     16.86804      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817924
+ gKS LUMO energy    (eV):       1.203556
+ gKS HOMO-LUMO gap  (eV):      10.021480
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960357546
+    Nucleus Energy  (Ha):      -33.6853431816
+    Hartree Energy  (Ha):        7.1899306587
+    Exchange Energy (Ha):       -2.6728242990
+
+    Total Energy    (Ha):      -14.5722010673
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.84074E-05
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   23
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498421
+ SOX diagram     :    0.02744799
+ MP2 correlation :   -0.02753622
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275362165
+ 
+ MP2 Total Energy (Ha):       -14.5997372837
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61774   -125.65523      2.0000
+   2k     -0.32405     -8.81790      2.0000
+  -----------------------------
+   3k      0.04423      1.20358      0.0000
+   4k      0.04423      1.20358      0.0000
+   5k      0.04423      1.20358      0.0000
+   6k      0.27110      7.37704      0.0000
+   7k      0.32020      8.71297      0.0000
+   8k      0.32020      8.71297      0.0000
+   9k      0.32020      8.71297      0.0000
+  10k      0.61989     16.86806      0.0000
+  11k      0.61989     16.86806      0.0000
+  12k      0.61989     16.86806      0.0000
+  13k      0.61989     16.86806      0.0000
+  14k      0.61989     16.86806      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817902
+ gKS LUMO energy    (eV):       1.203579
+ gKS HOMO-LUMO gap  (eV):      10.021481
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960373824
+    Nucleus Energy  (Ha):      -33.6853464187
+    Hartree Energy  (Ha):        7.1899326698
+    Exchange Energy (Ha):       -2.6728246694
+
+    Total Energy    (Ha):      -14.5722010359
+
+ Build density matrix
+ Convergence criterium on the density matrix   8.98631E-06
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   24
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498418
+ SOX diagram     :    0.02744798
+ MP2 correlation :   -0.02753620
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275362012
+ 
+ MP2 Total Energy (Ha):       -14.5997372370
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61774   -125.65519      2.0000
+   2k     -0.32405     -8.81789      2.0000
+  -----------------------------
+   3k      0.04423      1.20359      0.0000
+   4k      0.04423      1.20359      0.0000
+   5k      0.04423      1.20359      0.0000
+   6k      0.27110      7.37705      0.0000
+   7k      0.32020      8.71299      0.0000
+   8k      0.32020      8.71299      0.0000
+   9k      0.32020      8.71299      0.0000
+  10k      0.61989     16.86807      0.0000
+  11k      0.61989     16.86807      0.0000
+  12k      0.61989     16.86807      0.0000
+  13k      0.61989     16.86807      0.0000
+  14k      0.61989     16.86807      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817890
+ gKS LUMO energy    (eV):       1.203591
+ gKS HOMO-LUMO gap  (eV):      10.021481
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960381829
+    Nucleus Energy  (Ha):      -33.6853480058
+    Hartree Energy  (Ha):        7.1899336535
+    Exchange Energy (Ha):       -2.6728248511
+
+    Total Energy    (Ha):      -14.5722010206
+
+ Build density matrix
+ Convergence criterium on the density matrix   4.24986E-06
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   25
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498416
+ SOX diagram     :    0.02744797
+ MP2 correlation :   -0.02753619
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275361924
+ 
+ MP2 Total Energy (Ha):       -14.5997372129
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61774   -125.65516      2.0000
+   2k     -0.32405     -8.81788      2.0000
+  -----------------------------
+   3k      0.04423      1.20360      0.0000
+   4k      0.04423      1.20360      0.0000
+   5k      0.04423      1.20360      0.0000
+   6k      0.27110      7.37706      0.0000
+   7k      0.32020      8.71300      0.0000
+   8k      0.32020      8.71300      0.0000
+   9k      0.32020      8.71300      0.0000
+  10k      0.61989     16.86808      0.0000
+  11k      0.61989     16.86808      0.0000
+  12k      0.61989     16.86808      0.0000
+  13k      0.61989     16.86808      0.0000
+  14k      0.61989     16.86808      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817883
+ gKS LUMO energy    (eV):       1.203598
+ gKS HOMO-LUMO gap  (eV):      10.021482
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960385649
+    Nucleus Energy  (Ha):      -33.6853487604
+    Hartree Energy  (Ha):        7.1899341198
+    Exchange Energy (Ha):       -2.6728249376
+
+    Total Energy    (Ha):      -14.5722010133
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.92653E-06
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   26
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498415
+ SOX diagram     :    0.02744797
+ MP2 correlation :   -0.02753619
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275361874
+ 
+ MP2 Total Energy (Ha):       -14.5997372008
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61774   -125.65515      2.0000
+   2k     -0.32405     -8.81788      2.0000
+  -----------------------------
+   3k      0.04423      1.20360      0.0000
+   4k      0.04423      1.20360      0.0000
+   5k      0.04423      1.20360      0.0000
+   6k      0.27110      7.37706      0.0000
+   7k      0.32020      8.71301      0.0000
+   8k      0.32020      8.71301      0.0000
+   9k      0.32020      8.71301      0.0000
+  10k      0.61989     16.86808      0.0000
+  11k      0.61989     16.86808      0.0000
+  12k      0.61989     16.86808      0.0000
+  13k      0.61989     16.86808      0.0000
+  14k      0.61989     16.86808      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817880
+ gKS LUMO energy    (eV):       1.203602
+ gKS HOMO-LUMO gap  (eV):      10.021481
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960387400
+    Nucleus Energy  (Ha):      -33.6853491048
+    Hartree Energy  (Ha):        7.1899343318
+    Exchange Energy (Ha):       -2.6728249771
+
+    Total Energy    (Ha):      -14.5722010101
+
+ Build density matrix
+ Convergence criterium on the density matrix   8.21090E-07
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   27
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498415
+ SOX diagram     :    0.02744796
+ MP2 correlation :   -0.02753618
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275361847
+ 
+ MP2 Total Energy (Ha):       -14.5997371948
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61774   -125.65514      2.0000
+   2k     -0.32405     -8.81788      2.0000
+  -----------------------------
+   3k      0.04423      1.20360      0.0000
+   4k      0.04423      1.20360      0.0000
+   5k      0.04423      1.20360      0.0000
+   6k      0.27110      7.37706      0.0000
+   7k      0.32020      8.71301      0.0000
+   8k      0.32020      8.71301      0.0000
+   9k      0.32020      8.71301      0.0000
+  10k      0.61989     16.86809      0.0000
+  11k      0.61989     16.86809      0.0000
+  12k      0.61989     16.86809      0.0000
+  13k      0.61989     16.86809      0.0000
+  14k      0.61989     16.86809      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817878
+ gKS LUMO energy    (eV):       1.203604
+ gKS HOMO-LUMO gap  (eV):      10.021481
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960388160
+    Nucleus Energy  (Ha):      -33.6853492532
+    Hartree Energy  (Ha):        7.1899344226
+    Exchange Energy (Ha):       -2.6728249941
+
+    Total Energy    (Ha):      -14.5722010087
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.15807E-07
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.027 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.026 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   28
+
+ Calculate Hartree term with Resolution-of-Identity
+ Calculate Exchange term with Resolution-of-Identity
+ Calculate state range from    1 to   14
+
+ Perform the second-order self-energy calculation
+ with the QP self-consistent approach
+
+ Calculate 3-center integrals on eigenstates
+   Allocate:               3-center MO integrals,  Mem:   +0.010 (Mb),  Total Mem:    0.036 (Mb)
+   Allocate:                   TMP 3-center ints,  Mem:   +0.001 (Mb),  Total Mem:    0.037 (Mb)
+ Deallocate:                   TMP 3-center ints,  Mem:   -0.001 (Mb),  Total Mem:    0.036 (Mb)
+
+ MP2 Energy
+ 2-ring diagram  :   -0.05498414
+ SOX diagram     :    0.02744796
+ MP2 correlation :   -0.02753618
+
+
+ Destroy 3-center integrals on eigenstates
+ Deallocate:               3-center MO integrals,  Mem:   -0.010 (Mb),  Total Mem:    0.026 (Mb)
+ MP2 Energy       (Ha):        -0.0275361832
+ 
+ MP2 Total Energy (Ha):       -14.5997371919
+
+ Simple mixing with parameter:  0.5000
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #        (Ha)         (eV)      
+   1k     -4.61774   -125.65513      2.0000
+   2k     -0.32405     -8.81788      2.0000
+  -----------------------------
+   3k      0.04423      1.20360      0.0000
+   4k      0.04423      1.20360      0.0000
+   5k      0.04423      1.20360      0.0000
+   6k      0.27110      7.37706      0.0000
+   7k      0.32020      8.71301      0.0000
+   8k      0.32020      8.71301      0.0000
+   9k      0.32020      8.71301      0.0000
+  10k      0.61989     16.86809      0.0000
+  11k      0.61989     16.86809      0.0000
+  12k      0.61989     16.86809      0.0000
+  13k      0.61989     16.86809      0.0000
+  14k      0.61989     16.86809      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.817877
+ gKS LUMO energy    (eV):       1.203605
+ gKS HOMO-LUMO gap  (eV):      10.021481
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.0000000000
+    Kinetic Energy  (Ha):       14.5960388461
+    Nucleus Energy  (Ha):      -33.6853493112
+    Hartree Energy  (Ha):        7.1899344578
+    Exchange Energy (Ha):       -2.6728250008
+
+    Total Energy    (Ha):      -14.5722010082
+
+ Build density matrix
+ Convergence criterium on the density matrix   9.77545E-08
+  ===> convergence has been reached
+ 
+
+ ==================================================
+ The SCF loop ends here
+ ==================================================
+ Deallocate:                 Hamiltonian history,  Mem:   -0.003 (Mb),  Total Mem:    0.023 (Mb)
+ Deallocate:              Density matrix history,  Mem:   -0.001 (Mb),  Total Mem:    0.021 (Mb)
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.023 (Mb)
+ Deallocate:                    Density matrix P,  Mem:   -0.001 (Mb),  Total Mem:    0.021 (Mb)
+ Deallocate:                 Total Hamiltonian H,  Mem:   -0.001 (Mb),  Total Mem:    0.020 (Mb)
+ Deallocate:                Hartree potential Vh,  Mem:   -0.001 (Mb),  Total Mem:    0.018 (Mb)
+ Deallocate:              Exchange operator Sigx,  Mem:   -0.001 (Mb),  Total Mem:    0.017 (Mb)
+ Deallocate:                     XC operator Vxc,  Mem:   -0.001 (Mb),  Total Mem:    0.015 (Mb)
+
+
+   SCF Total Energy (Ha):      -14.5722010082
+
+         EXX Energy (Ha):       -2.6728250008
+   Total EXX Energy (Ha):      -14.5722010082
+ Singles correction (Ha):       -0.0000000000
+     Est. HF Energy (Ha):      -14.5722010082
+
+
+ Writing a big RESTART file
+ Deallocate:                    Overlap matrix S,  Mem:   -0.001 (Mb),  Total Mem:    0.014 (Mb)
+ Deallocate:               Overlap sqrt S^{-1/2},  Mem:   -0.001 (Mb),  Total Mem:    0.012 (Mb)
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.011 (Mb)
+ Deallocate:                  Kinetic operator T,  Mem:   -0.001 (Mb),  Total Mem:    0.009 (Mb)
+ Deallocate:                  Nucleus operator V,  Mem:   -0.001 (Mb),  Total Mem:    0.008 (Mb)
+ Deallocate:                     Wavefunctions C,  Mem:   -0.001 (Mb),  Total Mem:    0.006 (Mb)
+ Deallocate:                         index basis,  Mem:   -0.001 (Mb),  Total Mem:    0.006 (Mb)
+ Deallocate:                  3-center integrals,  Mem:   -0.006 (Mb),  Total Mem:    0.000 (Mb)
+
+                 ----------------------------
+
+                 --- Memory usage summary ---
+
+ Memory that was not deallocated properly
+                 Memory (Mb):     0.000
+
+ Maximum memory used during the run
+            Peak memory (Mb):     0.037
+ 
+
+                 --- Timings in (s) and # of calls ---
+
+                    Total time             24.08
+
+                 -------------------------------------
+
+                 Total pre SCF              0.15
+                     Total SCF             23.92
+                Total post SCF              0.00
+
+                 -------------------------------------
+
+            Integral screening              0.01         1
+            2-center integrals              0.01         1
+            3-center integrals              0.00         1
+                     Overlap S              0.00         1
+            Approx Hamiltonian              0.06         1
+           Kinetic Hamiltonian              0.00         1
+   Electron-nuclei Hamiltonian              0.05         1
+               ECP Hamiltonian              0.00         0
+ 
+                 -------------------------------------
+ 
+               Grid generation              0.05         1
+                Density Matrix              0.00        29
+                       Hartree              0.00        28
+                      Exchange              0.00        28
+                        DFT xc              0.00         0
+             Hamiltonian diago              0.01        29
+                    Pulay DIIS              0.00         0
+          RESTART file writing              0.03        28
+ 
+            Single Excitations              0.00         1
+                FNO generation              0.00         0
+                        Forces              0.00         0
+ 
+                 -------------------------------------
+ 
+        Total chi polarization              0.00         0
+   Rotation 3-center integrals              0.00        23
+              Build 2 particle H            0.00         0
+                       Common part          0.00         0
+                        TDDFT part          0.00         0
+                          BSE part          0.00         0
+              Diago 2 particle H            0.00         0
+                         Build W            0.00         0
+                Optical spectrum            0.00         0
+ 
+                GW self-energy              0.00         0
+               MP2 self-energy             23.87        23
+           GWGamma self-energy              0.00         0
+                    MP2 energy              0.00         0
+                Full CI for 2e              0.00         0
+ 
+                 -------------------------------------
+
+ SUMMARY of all the WARNINGS issued during the run:
+
+ 1.     RESTART file has been ignored, since it does not contain the required empty states                  
+
+
+
+ This is the end
+

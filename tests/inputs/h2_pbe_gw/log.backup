@@ -1,0 +1,1440 @@
+ ======================================================================
+
+
+            Welcome to the fascinating world of MOLGW
+
+                        version 1.F
+
+
+ ======================================================================
+
+ MOLGW commit git SHA: Stopping at filesystem boundary (GIT_DIS
+
+ Today is 12/06/2021
+ It is now 19:45
+ And it is perfect time to work
+
+ Linking options:
+ Running with LIBXC
+ Running with LIBINT (to calculate the Coulomb integrals)
+      max angular momentum handled by your LIBINT compilation:     7   k
+ Using LIBINT for the one-body parts of the Hamiltonian as well
+ 
+ 
+ Opening input file: h2_pbe_gw.in
+
+  === Echo the entire list of input variables  ===
+
+                      scf      pbe                     
+                  postscf      gw                      
+              move_nuclei      no                                                                                                  
+                    nstep        50
+                 tolforce    1.00000000E-05
+             alpha_hybrid    0.00000000E+00
+              beta_hybrid    0.00000000E+00
+             gamma_hybrid    1.00000000E+06
+                    basis      cc-pVDZ                                                                                             
+              auxil_basis                                                                                                          
+               basis_path      /home/ymbyun/backup/molgw_basis/                                                                    
+              small_basis                                                                                                          
+          ecp_small_basis                                                                                                          
+            gaussian_type      pure
+                    nspin         1
+                   charge    0.00000000E+00
+            magnetization    0.00000000E+00
+              temperature    0.00000000E+00
+             grid_quality      high        
+       tddft_grid_quality      high        
+         integral_quality      high        
+         partition_scheme      ssf         
+                     nscf        30
+             alpha_mixing    7.00000000E-01
+            mixing_scheme      simple      
+              diis_switch    5.00000000E-02
+    level_shifting_energy    0.00000000E+00
+         init_hamiltonian      guess       
+                   tolscf    1.00000000E-07
+              min_overlap    1.00000000E-05
+              npulay_hist         6
+                      tda      no 
+                  triplet      no 
+              nexcitation         0
+                   toldav    1.00000000E-04
+               frozencore      no 
+                   ncoreg         0
+                   ncorew         0
+                nvirtualg    100000
+                nvirtualw    100000
+              nvirtualspa    100000
+              nomega_imag         0
+     selfenergy_state_min         1
+     selfenergy_state_max         5
+   selfenergy_state_range    100000
+             nomega_sigma        51
+               step_sigma    1.00000000E-02
+           ignore_restart      no 
+        ignore_bigrestart      no 
+             print_matrix      no 
+                print_eri      no 
+                print_wfn      no 
+               print_cube      no 
+                  print_w      no 
+            print_restart      yes
+         print_bigrestart      yes
+              print_sigma      no 
+               print_pdos      no 
+          print_multipole      no 
+              length_unit      angstrom    
+                    natom         2
+                 xyz_file                                                                                                          
+                   nghost         0
+                      eta    5.00000000E-03
+                  scissor    0.00000000E+00
+              grid_memory    4.00000000E+02
+      scalapack_block_min       400
+          scalapack_nprow         1
+          scalapack_npcol         1
+          mpi_nproc_ortho         1
+             alpha_cohsex    1.00000000E+00
+              beta_cohsex    1.00000000E+00
+                 dft_core         0
+             gamma_cohsex    0.00000000E+00
+             delta_cohsex    0.00000000E+00
+           epsilon_cohsex    0.00000000E+00
+              virtual_fno      no 
+                rcut_mbpt    1.00000000E+00
+            gwgamma_tddft      no 
+                 ecp_type                                                                                                          
+             ecp_elements                                                                                                          
+              ecp_quality      high        
+                ecp_basis                                                                                                          
+          ecp_auxil_basis                                                                                                          
+
+  ================================================
+
+   XC functional    1 :  Perdew, Burke & Ernzerhof
+   XC functional    2 :  Perdew, Burke & Ernzerhof
+
+ Summary of the input parameters 
+
+       Calculation type:   PBE+GW                                                                                              
+               SCF type:   PBE                                                                                                 
+          Post SCF type:   GW                                                                                                  
+                  Natom:   2
+                  Nghost:  0
+              Electrons:   2.0000
+                 Charge:   0.0000
+          Magnetization:   0.0000
+              Basis set:   cc-pVDZ                                                                                             
+    Auxiliary basis set:                                                                                                       
+          Gaussian type:   PURE
+         Basis file path:  /home/ymbyun/backup/molgw_basis/                                                                    
+      Spin polarization:   1
+              SCF steps:  30
+                 Mixing:   0.7000
+           Grid quality:   HIGH        
+       Integral quality:   HIGH        
+ 
+        IO options:
+        - matrices details:     F
+        - ERI file:             F
+        - ignore big RESTART:   F
+        - plot some wfns:       F
+        - dump spectral functs  F
+        - dump self-energy      F
+        - RESTART files         T
+        - big RESTART file      T
+
+ ================================
+       Atom list
+                        bohr                                        angstrom
+ atom    1   H:      1.322808     0.000000     0.000000           0.700000     0.000000     0.000000
+ atom    2   H:     -1.322808     0.000000     0.000000          -0.700000     0.000000     0.000000
+ ================================
+
+ Number of bonds     0
+ Molecule has inversion symmetry
+ Molecule is linear
+ 
+
+ Setting up the cartesian to pure transforms up to l=  7
+ Transformations set up completed for both CARTESIAN and PURE Gaussians
+ 
+ Setting up the basis set for wavefunctions
+ 
+                  Total number of basis functions:      10
+                  Total number of cart. functions:      10
+                                 Number of shells:       6
+        Maximum angular momentum in the basis set:       1
+                                                         p
+ Basis set is fit and ready
+
+
+ Tolerance on integrals set to  1.00E-08
+
+ Cauchy-Schwartz screening of the 3- or 4-center integrals
+
+ Non negligible shellpairs to be computed      21  over a total of      21
+ Saving (%):       0.0000
+   Allocate:                         index basis,  Mem:   +0.000 (Mb),  Total Mem:    0.000 (Mb)
+
+ Number of integrals to be stored:         1540
+
+ Calculate and store the 4-center Coulomb integrals
+ All ERI have been calculated
+
+   Allocate:                    Overlap matrix S,  Mem:   +0.001 (Mb),  Total Mem:    0.001 (Mb)
+   Allocate:                  Kinetic operator T,  Mem:   +0.001 (Mb),  Total Mem:    0.002 (Mb)
+   Allocate:                  Nucleus operator V,  Mem:   +0.001 (Mb),  Total Mem:    0.003 (Mb)
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.003 (Mb)
+
+ Setup overlap matrix S (LIBINT)
+
+ Calculate overlap matrix square-root S^{1/2}
+   Allocate:               Overlap sqrt S^{-1/2},  Mem:   +0.001 (Mb),  Total Mem:    0.004 (Mb)
+
+ Filtering basis functions that induce overcompleteness
+   Lowest S eigenvalue is            7.06E-02
+   Tolerance on overlap eigenvalues  1.00E-05
+   Retaining    10 among    10
+   Allocate:                     Wavefunctions C,  Mem:   +0.001 (Mb),  Total Mem:    0.005 (Mb)
+
+ === Occupations ===
+   1      2.00000
+   2      0.00000
+   3      0.00000
+   4      0.00000
+   5      0.00000
+   6      0.00000
+ 
+
+ No RESTART file found
+
+ Setup kinetic part of the Hamiltonian (LIBINT)
+
+ Setup nucleus-electron part of the Hamiltonian (LIBINT)
+
+ Calculate approximate HXC potential with a superposition of atomic densities
+ Simple LDA functional on a coarse grid
+
+ Distributing the grid among procs
+ Maximum number of grid points for a single proc          838
+
+ Setup the DFT quadrature
+ discretization grid per atom [radial , angular max - angular min]   25   26    6
+ total number of real-space points for this processor     838
+
+ Number of electrons:      2.001236
+      XC energy (Ha):     -0.493043
+
+ Approximate hamiltonian
+ Diagonalization for spin:   1
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.004 (Mb)
+   Allocate:                 Hamiltonian history,  Mem:   +0.002 (Mb),  Total Mem:    0.006 (Mb)
+   Allocate:              Density matrix history,  Mem:   +0.001 (Mb),  Total Mem:    0.007 (Mb)
+   Allocate:                 Total Hamiltonian H,  Mem:   +0.001 (Mb),  Total Mem:    0.007 (Mb)
+   Allocate:                Hartree potential Vh,  Mem:   +0.001 (Mb),  Total Mem:    0.008 (Mb)
+   Allocate:              Exchange operator Sigx,  Mem:   +0.001 (Mb),  Total Mem:    0.009 (Mb)
+   Allocate:                     XC operator Vxc,  Mem:   +0.001 (Mb),  Total Mem:    0.010 (Mb)
+   Allocate:                    Density matrix P,  Mem:   +0.001 (Mb),  Total Mem:    0.010 (Mb)
+
+ Distributing the grid among procs
+ Maximum number of grid points for a single proc         9016
+
+ Setup the DFT quadrature
+ discretization grid per atom [radial , angular max - angular min]   60  110   38
+ total number of real-space points for this processor    9016
+ Precalculate the functions on N grid points    8960
+   which corresponds to   140 batches of size   64
+   Allocate:                  basis ftns on grid,  Mem:   +0.684 (Mb),  Total Mem:    0.694 (Mb)
+ Precalculate the gradients on N grid points         8960
+   which corresponds to   140 batches of size   64
+   Allocate:             basis grad ftns on grid,  Mem:   +2.051 (Mb),  Total Mem:    2.745 (Mb)
+ Build density matrix
+
+-------------------------------------------
+ *** SCF cycle No:    1
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.560138
+
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.29778     -8.10302      2.0000
+  -----------------------------
+   2     -0.09612     -2.61560      0.0000
+   3      0.42500     11.56492      0.0000
+   4      0.46229     12.57969      0.0000
+   5      1.03278     28.10337      0.0000
+   6      1.08704     29.57978      0.0000
+   7      1.08704     29.57978      0.0000
+   8      1.36006     37.00910      0.0000
+   9      1.36006     37.00910      0.0000
+  10      1.91895     52.21736      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.103023
+ gKS LUMO energy    (eV):      -2.615597
+ gKS HOMO-LUMO gap  (eV):       5.487426
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8192508923
+    Nucleus Energy  (Ha):       -2.7232560403
+    Hartree Energy  (Ha):        1.0138088671
+    XC Energy       (Ha):       -0.5601377604
+
+    Total Energy    (Ha):       -1.0723503193
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.86282E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    2
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.556426
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30055     -8.17831      2.0000
+  -----------------------------
+   2     -0.09802     -2.66718      0.0000
+   3      0.42315     11.51438      0.0000
+   4      0.46076     12.53797      0.0000
+   5      1.02947     28.01318      0.0000
+   6      1.08424     29.50374      0.0000
+   7      1.08424     29.50374      0.0000
+   8      1.35746     36.93826      0.0000
+   9      1.35746     36.93826      0.0000
+  10      1.91583     52.13238      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.178309
+ gKS LUMO energy    (eV):      -2.667182
+ gKS HOMO-LUMO gap  (eV):       5.511127
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8123689161
+    Nucleus Energy  (Ha):       -2.7115000553
+    Hartree Energy  (Ha):        1.0048189445
+    XC Energy       (Ha):       -0.5564258707
+
+    Total Energy    (Ha):       -1.0727543433
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.12092E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    3
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557175
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30097     -8.18981      2.0000
+  -----------------------------
+   2     -0.09827     -2.67414      0.0000
+   3      0.42288     11.50712      0.0000
+   4      0.46057     12.53270      0.0000
+   5      1.02893     27.99858      0.0000
+   6      1.08382     29.49222      0.0000
+   7      1.08382     29.49222      0.0000
+   8      1.35707     36.92785      0.0000
+   9      1.35707     36.92785      0.0000
+  10      1.91533     52.11886      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.189813
+ gKS LUMO energy    (eV):      -2.674136
+ gKS HOMO-LUMO gap  (eV):       5.515677
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8147374022
+    Nucleus Energy  (Ha):       -2.7144931352
+    Hartree Energy  (Ha):        1.0061870171
+    XC Energy       (Ha):       -0.5571751202
+
+    Total Energy    (Ha):       -1.0727601140
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.78546E-03
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    4
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557298
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30103     -8.19139      2.0000
+  -----------------------------
+   2     -0.09830     -2.67480      0.0000
+   3      0.42285     11.50627      0.0000
+   4      0.46055     12.53233      0.0000
+   5      1.02885     27.99632      0.0000
+   6      1.08376     29.49067      0.0000
+   7      1.08376     29.49067      0.0000
+   8      1.35703     36.92654      0.0000
+   9      1.35703     36.92654      0.0000
+  10      1.91526     52.11682      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.191393
+ gKS LUMO energy    (eV):      -2.674798
+ gKS HOMO-LUMO gap  (eV):       5.516596
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8151149250
+    Nucleus Energy  (Ha):       -2.7149777501
+    Hartree Energy  (Ha):        1.0064169772
+    XC Energy       (Ha):       -0.5572981640
+
+    Total Energy    (Ha):       -1.0727602898
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.69068E-04
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    5
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557318
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30103     -8.19155      2.0000
+  -----------------------------
+   2     -0.09830     -2.67476      0.0000
+   3      0.42285     11.50624      0.0000
+   4      0.46056     12.53241      0.0000
+   5      1.02883     27.99599      0.0000
+   6      1.08376     29.49052      0.0000
+   7      1.08376     29.49052      0.0000
+   8      1.35702     36.92646      0.0000
+   9      1.35702     36.92646      0.0000
+  10      1.91525     52.11656      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.191555
+ gKS LUMO energy    (eV):      -2.674762
+ gKS HOMO-LUMO gap  (eV):       5.516792
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8151717617
+    Nucleus Energy  (Ha):       -2.7150531834
+    Hartree Energy  (Ha):        1.0064551938
+    XC Energy       (Ha):       -0.5573177898
+
+    Total Energy    (Ha):       -1.0727602956
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.64651E-05
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    6
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557321
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30103     -8.19155      2.0000
+  -----------------------------
+   2     -0.09829     -2.67471      0.0000
+   3      0.42285     11.50626      0.0000
+   4      0.46056     12.53247      0.0000
+   5      1.02883     27.99595      0.0000
+   6      1.08376     29.49053      0.0000
+   7      1.08376     29.49053      0.0000
+   8      1.35702     36.92648      0.0000
+   9      1.35702     36.92648      0.0000
+  10      1.91525     52.11653      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.191552
+ gKS LUMO energy    (eV):      -2.674714
+ gKS HOMO-LUMO gap  (eV):       5.516837
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8151793171
+    Nucleus Energy  (Ha):       -2.7150640068
+    Hartree Energy  (Ha):        1.0064614226
+    XC Energy       (Ha):       -0.5573207507
+
+    Total Energy    (Ha):       -1.0727602958
+
+ Build density matrix
+ Convergence criterium on the density matrix   4.20983E-06
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    7
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557321
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30103     -8.19154      2.0000
+  -----------------------------
+   2     -0.09829     -2.67469      0.0000
+   3      0.42285     11.50627      0.0000
+   4      0.46056     12.53249      0.0000
+   5      1.02883     27.99595      0.0000
+   6      1.08376     29.49054      0.0000
+   7      1.08376     29.49054      0.0000
+   8      1.35702     36.92649      0.0000
+   9      1.35702     36.92649      0.0000
+  10      1.91525     52.11653      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.191542
+ gKS LUMO energy    (eV):      -2.674694
+ gKS HOMO-LUMO gap  (eV):       5.516848
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8151800017
+    Nucleus Energy  (Ha):       -2.7150652758
+    Hartree Energy  (Ha):        1.0064624026
+    XC Energy       (Ha):       -0.5573211464
+
+    Total Energy    (Ha):       -1.0727602958
+
+ Build density matrix
+ Convergence criterium on the density matrix   9.02550E-07
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    8
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557321
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30103     -8.19154      2.0000
+  -----------------------------
+   2     -0.09829     -2.67469      0.0000
+   3      0.42285     11.50628      0.0000
+   4      0.46056     12.53250      0.0000
+   5      1.02883     27.99595      0.0000
+   6      1.08376     29.49055      0.0000
+   7      1.08376     29.49055      0.0000
+   8      1.35702     36.92650      0.0000
+   9      1.35702     36.92650      0.0000
+  10      1.91525     52.11654      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.191538
+ gKS LUMO energy    (eV):      -2.674687
+ gKS HOMO-LUMO gap  (eV):       5.516851
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8151799481
+    Nucleus Energy  (Ha):       -2.7150653294
+    Hartree Energy  (Ha):        1.0064625464
+    XC Energy       (Ha):       -0.5573211830
+
+    Total Energy    (Ha):       -1.0727602958
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.76763E-07
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    9
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557321
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30103     -8.19154      2.0000
+  -----------------------------
+   2     -0.09829     -2.67469      0.0000
+   3      0.42285     11.50628      0.0000
+   4      0.46056     12.53250      0.0000
+   5      1.02883     27.99595      0.0000
+   6      1.08376     29.49055      0.0000
+   7      1.08376     29.49055      0.0000
+   8      1.35702     36.92650      0.0000
+   9      1.35702     36.92650      0.0000
+  10      1.91525     52.11654      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.191537
+ gKS LUMO energy    (eV):      -2.674685
+ gKS HOMO-LUMO gap  (eV):       5.516852
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8151798910
+    Nucleus Energy  (Ha):       -2.7150652926
+    Hartree Energy  (Ha):        1.0064625643
+    XC Energy       (Ha):       -0.5573211805
+
+    Total Energy    (Ha):       -1.0727602958
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.34390E-07
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    2.745 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   10
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size           64
+
+ Number of electrons:      1.999997
+  DFT xc energy (Ha):     -0.557321
+
+
+ Simple mixing with parameter:  0.7000
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1     -0.30103     -8.19154      2.0000
+  -----------------------------
+   2     -0.09829     -2.67468      0.0000
+   3      0.42285     11.50628      0.0000
+   4      0.46056     12.53250      0.0000
+   5      1.02883     27.99596      0.0000
+   6      1.08376     29.49055      0.0000
+   7      1.08376     29.49055      0.0000
+   8      1.35702     36.92650      0.0000
+   9      1.35702     36.92650      0.0000
+  10      1.91525     52.11654      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.191536
+ gKS LUMO energy    (eV):      -2.674685
+ gKS HOMO-LUMO gap  (eV):       5.516852
+ 
+ 
+    Nucleus-Nucleus (Ha):        0.3779837221
+    Kinetic Energy  (Ha):        0.8151798677
+    Nucleus Energy  (Ha):       -2.7150652734
+    Hartree Energy  (Ha):        1.0064625655
+    XC Energy       (Ha):       -0.5573211777
+
+    Total Energy    (Ha):       -1.0727602958
+
+ Build density matrix
+ Convergence criterium on the density matrix   4.30046E-08
+  ===> convergence has been reached
+ 
+
+ ==================================================
+ The SCF loop ends here
+ ==================================================
+ Deallocate:                 Hamiltonian history,  Mem:   -0.002 (Mb),  Total Mem:    2.743 (Mb)
+ Deallocate:              Density matrix history,  Mem:   -0.001 (Mb),  Total Mem:    2.742 (Mb)
+ Deallocate:                  basis ftns on grid,  Mem:   -0.684 (Mb),  Total Mem:    2.059 (Mb)
+ Deallocate:             basis grad ftns on grid,  Mem:   -2.051 (Mb),  Total Mem:    0.008 (Mb)
+ Calculate Exchange term
+   Allocate:                     Fock operator F,  Mem:   +0.001 (Mb),  Total Mem:    0.009 (Mb)
+ Deallocate:                    Density matrix P,  Mem:   -0.001 (Mb),  Total Mem:    0.008 (Mb)
+ Deallocate:                 Total Hamiltonian H,  Mem:   -0.001 (Mb),  Total Mem:    0.007 (Mb)
+ Deallocate:                Hartree potential Vh,  Mem:   -0.001 (Mb),  Total Mem:    0.007 (Mb)
+ Deallocate:              Exchange operator Sigx,  Mem:   -0.001 (Mb),  Total Mem:    0.006 (Mb)
+ Deallocate:                     XC operator Vxc,  Mem:   -0.001 (Mb),  Total Mem:    0.005 (Mb)
+
+
+   SCF Total Energy (Ha):       -1.0727602958
+
+         EXX Energy (Ha):       -0.5032312826
+   Total EXX Energy (Ha):       -1.0186704007
+ Singles correction (Ha):       -0.0029125292
+     Est. HF Energy (Ha):       -1.0215829299
+
+
+ Writing a big RESTART file
+ Deallocate:                    Overlap matrix S,  Mem:   -0.001 (Mb),  Total Mem:    0.004 (Mb)
+ Deallocate:               Overlap sqrt S^{-1/2},  Mem:   -0.001 (Mb),  Total Mem:    0.003 (Mb)
+ Deallocate:                     Fock operator F,  Mem:   -0.001 (Mb),  Total Mem:    0.003 (Mb)
+ Deallocate:                  Kinetic operator T,  Mem:   -0.001 (Mb),  Total Mem:    0.002 (Mb)
+ Deallocate:                  Nucleus operator V,  Mem:   -0.001 (Mb),  Total Mem:    0.001 (Mb)
+
+
+ ==================================================
+ Self-energy evaluation starts here
+ ==================================================
+
+
+ WARNING: small complex number is  5.00E-03
+ Calculate state range from    1 to    5
+
+ Prepare a polarizability spectral function with
+                               Occupied states:        1
+                                Virtual states:        9
+                              Transition space:        9
+
+ Try to read spectral function from file SCREENED_COULOMB
+ File does not exist
+
+
+ Calculating the polarizability
+ Singlet final state
+   Allocate:                                 A+B,  Mem:   +0.001 (Mb),  Total Mem:    0.002 (Mb)
+   Allocate:                                 A-B,  Mem:   +0.001 (Mb),  Total Mem:    0.002 (Mb)
+
+ Build the electron-hole hamiltonian
+ Build Common part: Energies + Hartree + possibly Exchange
+ Content of Exchange:    0.000
+ Deallocate:                                 A-B,  Mem:   -0.001 (Mb),  Total Mem:    0.002 (Mb)
+   Allocate:                                 X+Y,  Mem:   +0.001 (Mb),  Total Mem:    0.002 (Mb)
+
+ Performing the SCALAPACK block diago when A-B is diagonal
+ Deallocate (A+B) and possibly (A-B)
+ Deallocate:                                 A+B,  Mem:   -0.001 (Mb),  Total Mem:    0.002 (Mb)
+
+ Calculate the RPA energy using the Tamm-Dancoff decomposition
+ Eq. (9) from J. Chem. Phys. 132, 234114 (2010)
+
+ RPA correlation energy (Ha):    -0.0838669374
+
+ Lowest neutral excitation energy (eV):    9.996355
+
+ Build W = v * chi * v
+
+ Spectral function initialized with Coulomb basis functions:       55
+ Spectral function initialized with resonant poles         :        9
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =    1.2932313711892739E-015
+  (ymbyun) eri_eigen_klij =    0.1421736474352251     
+  (ymbyun) eri_eigen_klij =   -6.0323614395524329E-016
+  (ymbyun) eri_eigen_klij =   -7.5272757181156127E-002
+  (ymbyun) eri_eigen_klij =   -8.9999687923451068E-016
+  (ymbyun) eri_eigen_klij =   -1.9603494858401862E-017
+  (ymbyun) eri_eigen_klij =    9.3562423170249548E-017
+  (ymbyun) eri_eigen_klij =    5.7297900931295865E-017
+  (ymbyun) eri_eigen_klij =    6.1323119087673362E-017
+  (ymbyun) eri_eigen_klij =    4.1756877797141665E-003
+  (ymbyun) eri_eigen_klij =   -1.8932964329773942E-015
+  (ymbyun) eri_eigen_klij =    4.1338590555717723E-002
+  (ymbyun) eri_eigen_klij =    7.0943889752437141E-016
+  (ymbyun) eri_eigen_klij =   -8.4744172978534898E-002
+  (ymbyun) eri_eigen_klij =   -4.4879294410264824E-016
+  (ymbyun) eri_eigen_klij =    4.0195188792847346E-016
+  (ymbyun) eri_eigen_klij =    1.3411778002986221E-016
+  (ymbyun) eri_eigen_klij =    1.1178863627956225E-016
+  (ymbyun) eri_eigen_klij =   -8.7756955461533538E-017
+  (ymbyun) eri_eigen_klij =   -2.2153458778179168E-015
+  (ymbyun) eri_eigen_klij =   -0.1195165627211884     
+  (ymbyun) eri_eigen_klij =    4.7534030163750273E-018
+  (ymbyun) eri_eigen_klij =    2.9543003086502155E-017
+  (ymbyun) eri_eigen_klij =    1.0416962990462431E-016
+  (ymbyun) eri_eigen_klij =    4.1497192324018515E-017
+  (ymbyun) eri_eigen_klij =    2.6838837721777418E-018
+  (ymbyun) eri_eigen_klij =    1.9180890779445514E-002
+  (ymbyun) eri_eigen_klij =    1.2549927909479519E-015
+  (ymbyun) eri_eigen_klij =    3.4854731255857307E-002
+  (ymbyun) eri_eigen_klij =    2.3285182140130169E-016
+  (ymbyun) eri_eigen_klij =   -1.9353405973556578E-016
+  (ymbyun) eri_eigen_klij =   -4.5965387789500806E-017
+  (ymbyun) eri_eigen_klij =   -1.3970323349104075E-016
+  (ymbyun) eri_eigen_klij =   -2.6630954691500784E-016
+  (ymbyun) eri_eigen_klij =   -1.0714410030838090E-016
+  (ymbyun) eri_eigen_klij =   -4.7631687069104164E-017
+  (ymbyun) eri_eigen_klij =    9.9338599076452086E-017
+  (ymbyun) eri_eigen_klij =    4.9261101091317794E-016
+  (ymbyun) eri_eigen_klij =    6.6098727252783833E-016
+  (ymbyun) eri_eigen_klij =    0.1429130606261115     
+  (ymbyun) eri_eigen_klij =    1.7591129088075213E-015
+  (ymbyun) eri_eigen_klij =   -8.0296905221265188E-016
+  (ymbyun) eri_eigen_klij =    1.8297582131473793E-002
+  (ymbyun) eri_eigen_klij =   -0.1588962575800071     
+  (ymbyun) eri_eigen_klij =    5.8330282410419422E-016
+  (ymbyun) eri_eigen_klij =    1.6491638408481170E-015
+  (ymbyun) eri_eigen_klij =    0.1588962575800071     
+  (ymbyun) eri_eigen_klij =    1.8297582131473908E-002
+  (ymbyun) eri_eigen_klij =   -5.7475369583258820E-016
+  (ymbyun) eri_eigen_klij =   -2.4904004552522824E-015
+  (ymbyun) eri_eigen_klij =   -8.1956769050451544E-016
+  (ymbyun) eri_eigen_klij =   -1.2412690184482718E-016
+  (ymbyun) eri_eigen_klij =   -2.9938608538897259E-015
+  (ymbyun) eri_eigen_klij =   -7.0457273301157411E-017
+  (ymbyun) eri_eigen_klij =   -8.2842722585974049E-016
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =    0.1136359668958167     
+  (ymbyun) eri_eigen_klij =   -3.3774799563888886E-016
+  (ymbyun) eri_eigen_klij =    7.2393583403909112E-002
+  (ymbyun) eri_eigen_klij =   -1.2059665512373638E-015
+  (ymbyun) eri_eigen_klij =    1.6837619710811397E-002
+  (ymbyun) eri_eigen_klij =    3.4848871396263263E-017
+  (ymbyun) eri_eigen_klij =   -2.7115999286773171E-017
+  (ymbyun) eri_eigen_klij =    5.0836637876490060E-017
+  (ymbyun) eri_eigen_klij =    6.0864577081136054E-017
+  (ymbyun) eri_eigen_klij =    1.0598792078541921E-016
+  (ymbyun) eri_eigen_klij =    8.7558803140102684E-002
+  (ymbyun) eri_eigen_klij =   -6.5344685806137094E-016
+  (ymbyun) eri_eigen_klij =   -7.2738034692710410E-002
+  (ymbyun) eri_eigen_klij =   -1.7892490782730895E-016
+  (ymbyun) eri_eigen_klij =    1.0513332959470179E-017
+  (ymbyun) eri_eigen_klij =    8.2807755479311880E-017
+  (ymbyun) eri_eigen_klij =    2.9901641378108986E-017
+  (ymbyun) eri_eigen_klij =    1.3651493432455720E-017
+  (ymbyun) eri_eigen_klij =    1.5303163061242136E-002
+  (ymbyun) eri_eigen_klij =    8.2814034652415047E-002
+  (ymbyun) eri_eigen_klij =   -1.0693443510784939E-015
+  (ymbyun) eri_eigen_klij =    1.1591916229187895E-002
+  (ymbyun) eri_eigen_klij =    3.1905145602899602E-017
+  (ymbyun) eri_eigen_klij =   -2.2357568302192277E-017
+  (ymbyun) eri_eigen_klij =    3.4877157601666310E-017
+  (ymbyun) eri_eigen_klij =    4.3098892060679987E-017
+  (ymbyun) eri_eigen_klij =   -3.2986208088003195E-016
+  (ymbyun) eri_eigen_klij =    9.0487110149633995E-002
+  (ymbyun) eri_eigen_klij =    1.4670553638041302E-016
+  (ymbyun) eri_eigen_klij =    3.6330386185828373E-018
+  (ymbyun) eri_eigen_klij =   -5.1520767336118862E-017
+  (ymbyun) eri_eigen_klij =   -2.1052965121951105E-017
+  (ymbyun) eri_eigen_klij =   -6.9401319128956247E-018
+  (ymbyun) eri_eigen_klij =   -3.2440864282683723E-002
+  (ymbyun) eri_eigen_klij =    0.1275950332124559     
+  (ymbyun) eri_eigen_klij =    1.0199321706503023E-016
+  (ymbyun) eri_eigen_klij =   -8.3446107857804815E-017
+  (ymbyun) eri_eigen_klij =   -8.8093678957828930E-018
+  (ymbyun) eri_eigen_klij =   -1.4664271521732958E-017
+  (ymbyun) eri_eigen_klij =   -2.4353749953869166E-016
+  (ymbyun) eri_eigen_klij =    0.1121357993203425     
+  (ymbyun) eri_eigen_klij =   -4.2295372433847375E-017
+  (ymbyun) eri_eigen_klij =    4.3025080946203758E-018
+  (ymbyun) eri_eigen_klij =    2.6687588421848873E-016
+  (ymbyun) eri_eigen_klij =    1.2875033139431982E-018
+  (ymbyun) eri_eigen_klij =    0.1121357993203425     
+  (ymbyun) eri_eigen_klij =   -2.4910323873587772E-016
+  (ymbyun) eri_eigen_klij =   -5.9460330872402740E-017
+  (ymbyun) eri_eigen_klij =    3.5701111056625241E-017
+  (ymbyun) eri_eigen_klij =    0.1096605119479147     
+  (ymbyun) eri_eigen_klij =    4.4326937851952795E-017
+  (ymbyun) eri_eigen_klij =   -7.3563541293317391E-018
+  (ymbyun) eri_eigen_klij =    0.1096605119479146     
+  (ymbyun) eri_eigen_klij =   -2.5268262874463703E-018
+  (ymbyun) eri_eigen_klij =    0.1259954408888658     
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =   -1.8520947215936328E-015
+  (ymbyun) eri_eigen_klij =   -7.5272757181156225E-002
+  (ymbyun) eri_eigen_klij =   -8.3414573474700090E-016
+  (ymbyun) eri_eigen_klij =    6.8184501856291116E-002
+  (ymbyun) eri_eigen_klij =    2.0155653058313906E-017
+  (ymbyun) eri_eigen_klij =    1.5103751119872393E-017
+  (ymbyun) eri_eigen_klij =   -4.5282213964476977E-017
+  (ymbyun) eri_eigen_klij =   -3.3329087718379694E-017
+  (ymbyun) eri_eigen_klij =   -3.0324067335801179E-017
+  (ymbyun) eri_eigen_klij =   -1.7446207260392140E-002
+  (ymbyun) eri_eigen_klij =    6.3326558111207698E-016
+  (ymbyun) eri_eigen_klij =   -5.2301096106817664E-002
+  (ymbyun) eri_eigen_klij =    6.4939052523773289E-016
+  (ymbyun) eri_eigen_klij =    3.5792015884283837E-002
+  (ymbyun) eri_eigen_klij =    2.0747345924333913E-016
+  (ymbyun) eri_eigen_klij =   -1.8074424013280074E-016
+  (ymbyun) eri_eigen_klij =   -4.9286896115756366E-017
+  (ymbyun) eri_eigen_klij =   -7.9521605997475865E-017
+  (ymbyun) eri_eigen_klij =   -9.0750995849037928E-017
+  (ymbyun) eri_eigen_klij =    6.7279996127249044E-016
+  (ymbyun) eri_eigen_klij =    6.7375799626357535E-002
+  (ymbyun) eri_eigen_klij =   -3.4391835254358780E-016
+  (ymbyun) eri_eigen_klij =   -1.4204242914191864E-017
+  (ymbyun) eri_eigen_klij =   -5.0664355555646454E-017
+  (ymbyun) eri_eigen_klij =   -1.6873223541819332E-017
+  (ymbyun) eri_eigen_klij =    4.6563172909896873E-018
+  (ymbyun) eri_eigen_klij =   -2.3687344782214081E-002
+  (ymbyun) eri_eigen_klij =   -2.7878787306390098E-015
+  (ymbyun) eri_eigen_klij =   -2.1159403577796509E-002
+  (ymbyun) eri_eigen_klij =   -1.3881867578612166E-016
+  (ymbyun) eri_eigen_klij =    1.1237184801574536E-016
+  (ymbyun) eri_eigen_klij =    1.3940938478660807E-017
+  (ymbyun) eri_eigen_klij =    8.4442188173399560E-017
+  (ymbyun) eri_eigen_klij =    6.1784209754534551E-016
+  (ymbyun) eri_eigen_klij =   -1.0489531275110837E-015
+  (ymbyun) eri_eigen_klij =    2.7097279215633259E-017
+  (ymbyun) eri_eigen_klij =   -4.8365084051507397E-017
+  (ymbyun) eri_eigen_klij =   -2.6968237498343717E-016
+  (ymbyun) eri_eigen_klij =   -3.6192928437423202E-016
+  (ymbyun) eri_eigen_klij =   -7.4908917708040590E-002
+  (ymbyun) eri_eigen_klij =   -2.0936164777318424E-015
+  (ymbyun) eri_eigen_klij =    4.2852798046284407E-016
+  (ymbyun) eri_eigen_klij =   -9.9083584148744273E-003
+  (ymbyun) eri_eigen_klij =    8.6044213906097483E-002
+  (ymbyun) eri_eigen_klij =   -2.9409783451319890E-016
+  (ymbyun) eri_eigen_klij =   -2.0358275126432597E-015
+  (ymbyun) eri_eigen_klij =   -8.6044213906097497E-002
+  (ymbyun) eri_eigen_klij =   -9.9083584148744932E-003
+  (ymbyun) eri_eigen_klij =    2.9256754632516093E-016
+  (ymbyun) eri_eigen_klij =    3.1987579497865515E-016
+  (ymbyun) eri_eigen_klij =    4.4641914411171976E-016
+  (ymbyun) eri_eigen_klij =    6.5241505297049791E-017
+  (ymbyun) eri_eigen_klij =    5.8602332360420016E-016
+  (ymbyun) eri_eigen_klij =    2.1572475714684357E-017
+  (ymbyun) eri_eigen_klij =   -6.4839415994339816E-016
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =    3.4395195082541227E-002
+  (ymbyun) eri_eigen_klij =   -9.6673978834081671E-016
+  (ymbyun) eri_eigen_klij =    1.6837619710811481E-002
+  (ymbyun) eri_eigen_klij =    2.0713328454112733E-016
+  (ymbyun) eri_eigen_klij =    8.2696525997722620E-002
+  (ymbyun) eri_eigen_klij =    1.3365754057314285E-017
+  (ymbyun) eri_eigen_klij =   -6.2118933016517092E-018
+  (ymbyun) eri_eigen_klij =   -3.7899995869040837E-018
+  (ymbyun) eri_eigen_klij =   -8.3605740037611105E-018
+  (ymbyun) eri_eigen_klij =    5.1315849821901646E-016
+  (ymbyun) eri_eigen_klij =   -1.5770676609049929E-002
+  (ymbyun) eri_eigen_klij =   -4.1855680952791317E-016
+  (ymbyun) eri_eigen_klij =   -5.1041194240056013E-003
+  (ymbyun) eri_eigen_klij =    1.3867683308394866E-016
+  (ymbyun) eri_eigen_klij =   -1.3953514491254108E-017
+  (ymbyun) eri_eigen_klij =    5.7865668141530169E-017
+  (ymbyun) eri_eigen_klij =    2.3593051884868864E-016
+  (ymbyun) eri_eigen_klij =    3.1175808929880211E-016
+  (ymbyun) eri_eigen_klij =    5.9711729087746170E-002
+  (ymbyun) eri_eigen_klij =    2.1616810719524284E-002
+  (ymbyun) eri_eigen_klij =    7.0686624848840453E-016
+  (ymbyun) eri_eigen_klij =    3.8662373665255496E-002
+  (ymbyun) eri_eigen_klij =    7.6460430251745493E-017
+  (ymbyun) eri_eigen_klij =   -6.5414096140541496E-017
+  (ymbyun) eri_eigen_klij =    1.8172255879416634E-018
+  (ymbyun) eri_eigen_klij =    1.4896913475131325E-018
+  (ymbyun) eri_eigen_klij =   -2.2527330117335502E-016
+  (ymbyun) eri_eigen_klij =   -2.7953124126908003E-003
+  (ymbyun) eri_eigen_klij =   -7.1712184238552610E-016
+  (ymbyun) eri_eigen_klij =    8.3460781459350233E-018
+  (ymbyun) eri_eigen_klij =   -1.4515908023505002E-017
+  (ymbyun) eri_eigen_klij =   -1.1530650076488743E-016
+  (ymbyun) eri_eigen_klij =   -1.5457154739421990E-016
+  (ymbyun) eri_eigen_klij =   -4.1534315994249386E-002
+  (ymbyun) eri_eigen_klij =    2.5003217322780963E-002
+  (ymbyun) eri_eigen_klij =   -4.9858474035490538E-017
+  (ymbyun) eri_eigen_klij =    4.7483356959895525E-017
+  (ymbyun) eri_eigen_klij =    2.3678753717817883E-017
+  (ymbyun) eri_eigen_klij =    2.7253323890476327E-017
+  (ymbyun) eri_eigen_klij =   -7.2930164219795259E-016
+  (ymbyun) eri_eigen_klij =    2.6546931042332605E-002
+  (ymbyun) eri_eigen_klij =   -9.1159008949503488E-018
+  (ymbyun) eri_eigen_klij =   -3.3291439753743646E-017
+  (ymbyun) eri_eigen_klij =    6.8937952657908098E-016
+  (ymbyun) eri_eigen_klij =   -1.7167251010519790E-017
+  (ymbyun) eri_eigen_klij =    2.6546931042332602E-002
+  (ymbyun) eri_eigen_klij =   -6.7252399896224707E-016
+  (ymbyun) eri_eigen_klij =   -1.2356703245793532E-016
+  (ymbyun) eri_eigen_klij =    4.1672560459859133E-017
+  (ymbyun) eri_eigen_klij =    1.0286535540676454E-002
+  (ymbyun) eri_eigen_klij =    4.3817956308551614E-018
+  (ymbyun) eri_eigen_klij =    9.8667008234870395E-017
+  (ymbyun) eri_eigen_klij =    1.0286535540676449E-002
+  (ymbyun) eri_eigen_klij =    1.2715320137862981E-016
+  (ymbyun) eri_eigen_klij =    1.4842927569581107E-002
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =   -2.0759790691113025E-017
+  (ymbyun) eri_eigen_klij =   -1.9603494858402293E-017
+  (ymbyun) eri_eigen_klij =    3.4848871396263818E-017
+  (ymbyun) eri_eigen_klij =    1.5103751119873392E-017
+  (ymbyun) eri_eigen_klij =    1.3365754057314340E-017
+  (ymbyun) eri_eigen_klij =    8.2082707193423365E-002
+  (ymbyun) eri_eigen_klij =   -2.8036198664104901E-017
+  (ymbyun) eri_eigen_klij =    1.4241284256891502E-016
+  (ymbyun) eri_eigen_klij =   -5.9558349503728647E-016
+  (ymbyun) eri_eigen_klij =   -8.5091537608032868E-018
+  (ymbyun) eri_eigen_klij =   -2.2003330224727036E-016
+  (ymbyun) eri_eigen_klij =    1.2356864519384904E-017
+  (ymbyun) eri_eigen_klij =    3.8952830772836760E-017
+  (ymbyun) eri_eigen_klij =   -1.7551264314718948E-017
+  (ymbyun) eri_eigen_klij =    6.6689677887503696E-016
+  (ymbyun) eri_eigen_klij =   -3.1606544683645202E-016
+  (ymbyun) eri_eigen_klij =    8.1949097595020656E-003
+  (ymbyun) eri_eigen_klij =   -7.1164620693295461E-002
+  (ymbyun) eri_eigen_klij =    2.3353755971448273E-016
+  (ymbyun) eri_eigen_klij =   -2.1427101740702885E-017
+  (ymbyun) eri_eigen_klij =    9.4955710347509815E-018
+  (ymbyun) eri_eigen_klij =    7.3347235506032581E-017
+  (ymbyun) eri_eigen_klij =    2.2288153291840036E-002
+  (ymbyun) eri_eigen_klij =   -4.0025288197617997E-018
+  (ymbyun) eri_eigen_klij =   -2.1542369765605136E-017
+  (ymbyun) eri_eigen_klij =    1.7233035742194354E-016
+  (ymbyun) eri_eigen_klij =    1.6811292339966785E-018
+  (ymbyun) eri_eigen_klij =   -1.4442444867778491E-016
+  (ymbyun) eri_eigen_klij =    1.0057959090227085E-017
+  (ymbyun) eri_eigen_klij =   -7.3247165174310457E-016
+  (ymbyun) eri_eigen_klij =    1.7616904634937060E-016
+  (ymbyun) eri_eigen_klij =   -4.3013739222508970E-003
+  (ymbyun) eri_eigen_klij =    3.7353143917428264E-002
+  (ymbyun) eri_eigen_klij =   -1.4757580609992201E-016
+  (ymbyun) eri_eigen_klij =   -9.5913406207405226E-017
+  (ymbyun) eri_eigen_klij =    2.5890141193872494E-003
+  (ymbyun) eri_eigen_klij =    2.2001261777248945E-019
+  (ymbyun) eri_eigen_klij =    2.0330955072128741E-017
+  (ymbyun) eri_eigen_klij =    2.4424087602975116E-016
+  (ymbyun) eri_eigen_klij =   -3.7913658101625426E-017
+  (ymbyun) eri_eigen_klij =   -8.6391704202483514E-017
+  (ymbyun) eri_eigen_klij =    1.5370823075838001E-017
+  (ymbyun) eri_eigen_klij =    2.4373954600230425E-017
+  (ymbyun) eri_eigen_klij =    6.4924643182030569E-017
+  (ymbyun) eri_eigen_klij =    2.8077897307239618E-016
+  (ymbyun) eri_eigen_klij =   -5.2654263564930433E-017
+  (ymbyun) eri_eigen_klij =   -2.0389702921997050E-017
+  (ymbyun) eri_eigen_klij =   -4.6354780341990086E-017
+  (ymbyun) eri_eigen_klij =   -7.7600982302923245E-017
+  (ymbyun) eri_eigen_klij =   -1.2123095068115132E-016
+  (ymbyun) eri_eigen_klij =   -2.0146976819689002E-017
+  (ymbyun) eri_eigen_klij =    2.3933191812398084E-003
+  (ymbyun) eri_eigen_klij =   -1.6121166400560250E-016
+  (ymbyun) eri_eigen_klij =   -2.0783590878890701E-002
+  (ymbyun) eri_eigen_klij =   -1.3843562816140843E-016
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =    1.8577796143985335E-017
+  (ymbyun) eri_eigen_klij =    9.3562423170250016E-017
+  (ymbyun) eri_eigen_klij =   -2.7115999286774104E-017
+  (ymbyun) eri_eigen_klij =   -4.5282213964477446E-017
+  (ymbyun) eri_eigen_klij =   -6.2118933016516329E-018
+  (ymbyun) eri_eigen_klij =   -2.3617693383902665E-017
+  (ymbyun) eri_eigen_klij =    8.2082707193423379E-002
+  (ymbyun) eri_eigen_klij =    6.1973185433893306E-016
+  (ymbyun) eri_eigen_klij =   -2.7046200478408148E-018
+  (ymbyun) eri_eigen_klij =    7.1086452986594851E-018
+  (ymbyun) eri_eigen_klij =    1.9641803219716799E-016
+  (ymbyun) eri_eigen_klij =    4.9063886330904070E-017
+  (ymbyun) eri_eigen_klij =   -2.8293435577334815E-017
+  (ymbyun) eri_eigen_klij =    1.2764340016916482E-017
+  (ymbyun) eri_eigen_klij =   -3.0460715357408915E-016
+  (ymbyun) eri_eigen_klij =    6.1289332346613805E-016
+  (ymbyun) eri_eigen_klij =    7.1164620693295488E-002
+  (ymbyun) eri_eigen_klij =    8.1949097595021038E-003
+  (ymbyun) eri_eigen_klij =   -2.3247723806605487E-016
+  (ymbyun) eri_eigen_klij =    1.9731674210142304E-017
+  (ymbyun) eri_eigen_klij =   -5.6000846842152787E-017
+  (ymbyun) eri_eigen_klij =   -6.3706027792318649E-017
+  (ymbyun) eri_eigen_klij =    2.8624436920694965E-018
+  (ymbyun) eri_eigen_klij =    2.2288153291840043E-002
+  (ymbyun) eri_eigen_klij =   -1.6431312352294252E-016
+  (ymbyun) eri_eigen_klij =   -2.8777580901723445E-017
+  (ymbyun) eri_eigen_klij =    2.2579187412261454E-017
+  (ymbyun) eri_eigen_klij =    1.1985456958311931E-016
+  (ymbyun) eri_eigen_klij =   -2.8415723928749885E-018
+  (ymbyun) eri_eigen_klij =    1.7161903368257506E-016
+  (ymbyun) eri_eigen_klij =   -7.0997278537560978E-016
+  (ymbyun) eri_eigen_klij =   -3.7353143917428264E-002
+  (ymbyun) eri_eigen_klij =   -4.3013739222509222E-003
+  (ymbyun) eri_eigen_klij =    1.4625587909957522E-016
+  (ymbyun) eri_eigen_klij =    8.6656518408335046E-017
+  (ymbyun) eri_eigen_klij =   -2.6201553215615132E-018
+  (ymbyun) eri_eigen_klij =    2.5890141193872481E-003
+  (ymbyun) eri_eigen_klij =   -2.2245380716164627E-016
+  (ymbyun) eri_eigen_klij =   -7.6883848089264615E-017
+  (ymbyun) eri_eigen_klij =    8.2786382470793530E-017
+  (ymbyun) eri_eigen_klij =    4.7089176954749738E-017
+  (ymbyun) eri_eigen_klij =   -1.6868720318777419E-017
+  (ymbyun) eri_eigen_klij =    3.9603837851399839E-018
+  (ymbyun) eri_eigen_klij =   -9.4141303830229865E-017
+  (ymbyun) eri_eigen_klij =   -7.6743120613469352E-017
+  (ymbyun) eri_eigen_klij =    7.7830823106425185E-017
+  (ymbyun) eri_eigen_klij =    1.6487003877244933E-016
+  (ymbyun) eri_eigen_klij =    4.8495324045174436E-017
+  (ymbyun) eri_eigen_klij =    2.8052660289249958E-016
+  (ymbyun) eri_eigen_klij =    1.5715170314349520E-016
+  (ymbyun) eri_eigen_klij =    1.9990356662225207E-017
+  (ymbyun) eri_eigen_klij =    2.0783590878890701E-002
+  (ymbyun) eri_eigen_klij =    1.1685774950411681E-016
+  (ymbyun) eri_eigen_klij =    2.3933191812398232E-003
+  (ymbyun) eri_eigen_klij =    1.1000157132148505E-016
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =    1.6689497198219353E-016
+  (ymbyun) eri_eigen_klij =    5.7297900931296124E-017
+  (ymbyun) eri_eigen_klij =    5.0836637876489610E-017
+  (ymbyun) eri_eigen_klij =   -3.3329087718380015E-017
+  (ymbyun) eri_eigen_klij =   -3.7899995869039758E-018
+  (ymbyun) eri_eigen_klij =    1.4753047091756698E-016
+  (ymbyun) eri_eigen_klij =    6.2380634460190217E-016
+  (ymbyun) eri_eigen_klij =    5.7141458497513044E-002
+  (ymbyun) eri_eigen_klij =    2.3988834841720390E-017
+  (ymbyun) eri_eigen_klij =    3.4893245806426919E-018
+  (ymbyun) eri_eigen_klij =    1.7725344560602283E-016
+  (ymbyun) eri_eigen_klij =    2.1610144021481664E-017
+  (ymbyun) eri_eigen_klij =   -5.2439734171624873E-017
+  (ymbyun) eri_eigen_klij =    1.4891864626916393E-016
+  (ymbyun) eri_eigen_klij =    6.1378534760839530E-003
+  (ymbyun) eri_eigen_klij =    5.3301137817908156E-002
+  (ymbyun) eri_eigen_klij =   -7.4314775336597212E-016
+  (ymbyun) eri_eigen_klij =   -3.2045406693833840E-016
+  (ymbyun) eri_eigen_klij =   -3.8778895091634909E-017
+  (ymbyun) eri_eigen_klij =    1.2386169980377513E-016
+  (ymbyun) eri_eigen_klij =   -3.6155015006341181E-017
+  (ymbyun) eri_eigen_klij =    2.4255403500047362E-018
+  (ymbyun) eri_eigen_klij =    5.3789829304366710E-018
+  (ymbyun) eri_eigen_klij =   -9.9463668488463543E-017
+  (ymbyun) eri_eigen_klij =    1.9273842383485056E-002
+  (ymbyun) eri_eigen_klij =    1.0267044038763136E-017
+  (ymbyun) eri_eigen_klij =    9.0791082767926583E-018
+  (ymbyun) eri_eigen_klij =    1.2339570246368595E-016
+  (ymbyun) eri_eigen_klij =   -8.5600677846097760E-017
+  (ymbyun) eri_eigen_klij =   -3.3937361968943468E-003
+  (ymbyun) eri_eigen_klij =   -2.9471215214427020E-002
+  (ymbyun) eri_eigen_klij =    1.5958069458673349E-016
+  (ymbyun) eri_eigen_klij =    1.6934433704299095E-016
+  (ymbyun) eri_eigen_klij =    5.8282497625307692E-018
+  (ymbyun) eri_eigen_klij =    1.6772452488264483E-016
+  (ymbyun) eri_eigen_klij =    2.2949442326428205E-017
+  (ymbyun) eri_eigen_klij =   -1.8438000372647575E-016
+  (ymbyun) eri_eigen_klij =   -1.6404138646206049E-002
+  (ymbyun) eri_eigen_klij =   -6.7792127724129054E-018
+  (ymbyun) eri_eigen_klij =    9.3824523339444146E-017
+  (ymbyun) eri_eigen_klij =    1.6676887794496042E-016
+  (ymbyun) eri_eigen_klij =   -2.7147086165798147E-018
+  (ymbyun) eri_eigen_klij =   -9.0968568603901618E-017
+  (ymbyun) eri_eigen_klij =   -6.0087786525983947E-017
+  (ymbyun) eri_eigen_klij =    1.1791672192459767E-003
+  (ymbyun) eri_eigen_klij =    2.3343771663889410E-016
+  (ymbyun) eri_eigen_klij =    1.7097033884922934E-016
+  (ymbyun) eri_eigen_klij =    2.4096786666717344E-017
+  (ymbyun) eri_eigen_klij =    1.0239891634475636E-002
+  (ymbyun) eri_eigen_klij =    2.3848868135159374E-016
+  (ymbyun) eri_eigen_klij =    4.0331982609515736E-017
+  (ymbyun) eri_eigen_klij =   -8.3025559910904559E-017
+  (ymbyun) eri_eigen_klij =    1.7422215235021891E-016
+  (ymbyun) eri_eigen_klij =   -7.9640966877876332E-017
+  (ymbyun) eri_eigen_klij =    1.7643298649383227E-016
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =    1.8424928985332558E-016
+  (ymbyun) eri_eigen_klij =    6.1323119087673608E-017
+  (ymbyun) eri_eigen_klij =    6.0864577081135844E-017
+  (ymbyun) eri_eigen_klij =   -3.0324067335801579E-017
+  (ymbyun) eri_eigen_klij =   -8.3605740037611028E-018
+  (ymbyun) eri_eigen_klij =   -6.0066851171209611E-016
+  (ymbyun) eri_eigen_klij =   -7.5897296914902031E-018
+  (ymbyun) eri_eigen_klij =    2.6886217257378477E-017
+  (ymbyun) eri_eigen_klij =    5.7141458497513016E-002
+  (ymbyun) eri_eigen_klij =    1.2425385815310998E-017
+  (ymbyun) eri_eigen_klij =    1.7563909266501626E-016
+  (ymbyun) eri_eigen_klij =    7.2757793062099872E-018
+  (ymbyun) eri_eigen_klij =   -8.4326542947305741E-017
+  (ymbyun) eri_eigen_klij =    2.0624239630595448E-016
+  (ymbyun) eri_eigen_klij =   -5.3301137817908142E-002
+  (ymbyun) eri_eigen_klij =    6.1378534760839895E-003
+  (ymbyun) eri_eigen_klij =   -3.2162850304466643E-016
+  (ymbyun) eri_eigen_klij =   -9.1070153101904096E-016
+  (ymbyun) eri_eigen_klij =   -2.1720261293546432E-017
+  (ymbyun) eri_eigen_klij =    1.3307865095058479E-016
+  (ymbyun) eri_eigen_klij =   -3.3154458634339801E-017
+  (ymbyun) eri_eigen_klij =    1.5874829624072361E-018
+  (ymbyun) eri_eigen_klij =    1.1057671980738833E-016
+  (ymbyun) eri_eigen_klij =   -2.9611058214426594E-017
+  (ymbyun) eri_eigen_klij =    1.4258318836775883E-017
+  (ymbyun) eri_eigen_klij =    1.9273842383485049E-002
+  (ymbyun) eri_eigen_klij =    6.6612170691566181E-018
+  (ymbyun) eri_eigen_klij =    1.6641775538330094E-016
+  (ymbyun) eri_eigen_klij =   -1.1773823813240086E-016
+  (ymbyun) eri_eigen_klij =    2.9471215214427023E-002
+  (ymbyun) eri_eigen_klij =   -3.3937361968943815E-003
+  (ymbyun) eri_eigen_klij =    1.7241502651320034E-016
+  (ymbyun) eri_eigen_klij =    2.8065074482034733E-016
+  (ymbyun) eri_eigen_klij =   -1.3090790602041038E-017
+  (ymbyun) eri_eigen_klij =    1.8579657058488830E-016
+  (ymbyun) eri_eigen_klij =    2.0108269680580868E-016
+  (ymbyun) eri_eigen_klij =   -6.8793983479287530E-017
+  (ymbyun) eri_eigen_klij =   -7.9337932144102975E-018
+  (ymbyun) eri_eigen_klij =   -1.6404138646206042E-002
+  (ymbyun) eri_eigen_klij =    1.0815726969447122E-016
+  (ymbyun) eri_eigen_klij =    1.9978979238768899E-016
+  (ymbyun) eri_eigen_klij =   -3.3334419346967671E-017
+  (ymbyun) eri_eigen_klij =   -1.1715292412578680E-017
+  (ymbyun) eri_eigen_klij =   -1.8021921450597060E-016
+  (ymbyun) eri_eigen_klij =   -1.0239891634475634E-002
+  (ymbyun) eri_eigen_klij =    1.9436037515453070E-016
+  (ymbyun) eri_eigen_klij =    6.5153859235351409E-017
+  (ymbyun) eri_eigen_klij =    9.9167259910666647E-017
+  (ymbyun) eri_eigen_klij =    1.1791672192459830E-003
+  (ymbyun) eri_eigen_klij =    1.9568886458513705E-016
+  (ymbyun) eri_eigen_klij =    3.2133264500686775E-017
+  (ymbyun) eri_eigen_klij =   -8.1272033943280589E-017
+  (ymbyun) eri_eigen_klij =    2.7635282980416891E-016
+  (ymbyun) eri_eigen_klij =   -1.3460618127704598E-016
+  (ymbyun) eri_eigen_klij =    2.1214673415010717E-016
+  (ymbyun) eri_eigenstate_klmin(1,1,1,1) =    0.5032312825862275     
+  (ymbyun) eri_eigen_klij =    2.9677589482990770E-016
+  (ymbyun) eri_eigen_klij =    4.1756877797141422E-003
+  (ymbyun) eri_eigen_klij =    1.5051661148583610E-017
+  (ymbyun) eri_eigen_klij =   -1.7446207260392071E-002
+  (ymbyun) eri_eigen_klij =    5.4483077107527113E-016
+  (ymbyun) eri_eigen_klij =   -8.5091537608031558E-018
+  (ymbyun) eri_eigen_klij =    7.1086452986593187E-018
+  (ymbyun) eri_eigen_klij =    3.4893245806425525E-018
+  (ymbyun) eri_eigen_klij =    1.2425385815310875E-017
+  (ymbyun) eri_eigen_klij =    4.9082675148775977E-002
+  (ymbyun) eri_eigen_klij =    1.4566799005829571E-016
+  (ymbyun) eri_eigen_klij =    1.4938728663930947E-002
+  (ymbyun) eri_eigen_klij =   -4.5967354080796039E-017
+  (ymbyun) eri_eigen_klij =    3.5914244454993222E-002
+  (ymbyun) eri_eigen_klij =    1.3281310886534800E-016
+  (ymbyun) eri_eigen_klij =   -1.3625684946445219E-016
+  (ymbyun) eri_eigen_klij =   -3.5192014518001475E-017
+  (ymbyun) eri_eigen_klij =   -4.3355265679613276E-018
+  (ymbyun) eri_eigen_klij =   -6.2145020057178962E-017
+  (ymbyun) eri_eigen_klij =   -2.0131414466263025E-016
+  (ymbyun) eri_eigen_klij =   -1.2222650316678376E-002
+  (ymbyun) eri_eigen_klij =    8.2336411199803502E-017
+  (ymbyun) eri_eigen_klij =    1.9371057083803925E-018
+  (ymbyun) eri_eigen_klij =    1.1197690177893211E-017
+  (ymbyun) eri_eigen_klij =   -3.0329502218230151E-019
+  (ymbyun) eri_eigen_klij =   -2.2198120254434696E-018
+  (ymbyun) eri_eigen_klij =    2.7849876194369769E-002
+  (ymbyun) eri_eigen_klij =    2.3892937894014657E-016
+  (ymbyun) eri_eigen_klij =   -1.9965424128006431E-002
+  (ymbyun) eri_eigen_klij =   -7.0716787544642888E-017
+  (ymbyun) eri_eigen_klij =    7.4570991966180084E-017
+  (ymbyun) eri_eigen_klij =    2.0358911958668952E-017
+  (ymbyun) eri_eigen_klij =   -3.5169006934697971E-018
+  (ymbyun) eri_eigen_klij =   -3.6244775762787999E-016
+  (ymbyun) eri_eigen_klij =    2.6089679210709614E-017
+  (ymbyun) eri_eigen_klij =   -1.5246926887800658E-017
+  (ymbyun) eri_eigen_klij =    2.2471005203858023E-017
+  (ymbyun) eri_eigen_klij =    6.3514381960902585E-017
+  (ymbyun) eri_eigen_klij =    7.8372139668392447E-017
+  (ymbyun) eri_eigen_klij =   -9.0013862686412881E-003
+  (ymbyun) eri_eigen_klij =    4.4364022740162417E-016
+  (ymbyun) eri_eigen_klij =   -6.8835153373775629E-017
+  (ymbyun) eri_eigen_klij =    1.5800438696298013E-003
+  (ymbyun) eri_eigen_klij =   -1.3721105657154174E-002
+  (ymbyun) eri_eigen_klij =   -8.1536094016076931E-017
+  (ymbyun) eri_eigen_klij =    4.3477373513173324E-016
+  (ymbyun) eri_eigen_klij =    1.3721105657154179E-002
+  (ymbyun) eri_eigen_klij =    1.5800438696298119E-003
+  (ymbyun) eri_eigen_klij =    6.5446146862919297E-017
+  (ymbyun) eri_eigen_klij =    5.6665319597066301E-017
+  (ymbyun) eri_eigen_klij =   -7.1213409113795377E-017
+  (ymbyun) eri_eigen_klij =    1.8429219045108015E-017
+  (ymbyun) eri_eigen_klij =    1.4686603540906577E-017
+  (ymbyun) eri_eigen_klij =    4.5701622778994279E-017
+  (ymbyun) eri_eigen_klij =    2.5394077116701849E-016
+ Deallocate eigenvector array
+ Deallocate:                                 X+Y,  Mem:   -0.001 (Mb),  Total Mem:    0.001 (Mb)
+
+ RPA Total energy (Ha):       -1.1025373381
+ 
+ Perform a one-shot G0W0 calculation
+   Allocate:                     Temporary array,  Mem:   +0.000 (Mb),  Total Mem:    0.002 (Mb)
+ Sigma_c(omega) is calculated
+ Deallocate:                     Temporary array,  Mem:   -0.000 (Mb),  Total Mem:    0.001 (Mb)
+
+ Spectral function destroyed
+
+ GW eigenvalues (eV)
+   #        E0         SigX-Vxc       SigC          Z        E_qp^lin     E_qp^graph
+   1     -8.191536    -3.964100    -1.140235     0.909483   -12.833844   -12.857222
+   2     -2.674685     4.695065    -0.201850     0.919128     1.455157     1.474561
+   3     11.506281     5.571432    -1.546398     0.867971    14.999896    14.889524
+   4     12.532499     6.142690    -2.359648     0.810658    15.599252    15.366714
+   5     27.995955     8.254971    -0.836903     0.859963    34.375216    34.258857
+
+ Writing ENERGY_QP file
+ 
+ GW HOMO energy    (eV):     -12.857222
+ GW LUMO energy    (eV):       1.474561
+ GW HOMO-LUMO gap  (eV):      14.331783
+ 
+ Deallocate:                     Wavefunctions C,  Mem:   -0.001 (Mb),  Total Mem:    0.000 (Mb)
+ Deallocate:                         index basis,  Mem:   -0.000 (Mb),  Total Mem:    0.000 (Mb)
+
+                 ----------------------------
+
+                 --- Memory usage summary ---
+
+ Memory that was not deallocated properly
+                 Memory (Mb):     0.000
+
+ Maximum memory used during the run
+            Peak memory (Mb):     2.745
+ 
+
+                 --- Timings in (s) and # of calls ---
+
+                    Total time              0.27
+
+                 -------------------------------------
+
+                 Total pre SCF              0.01
+                     Total SCF              0.12
+                Total post SCF              0.02
+
+                 -------------------------------------
+
+            Integral screening              0.00         1
+            4-center integrals              0.00         1
+                     Overlap S              0.00         1
+            Approx Hamiltonian              0.00         1
+           Kinetic Hamiltonian              0.00         1
+   Electron-nuclei Hamiltonian              0.00         1
+               ECP Hamiltonian              0.00         0
+ 
+                 -------------------------------------
+ 
+               Grid generation              0.02         2
+                Density Matrix              0.00        11
+                       Hartree              0.01        10
+                      Exchange              0.00         1
+                        DFT xc              0.08        10
+             Hamiltonian diago              0.00        11
+                    Pulay DIIS              0.00         0
+          RESTART file writing              0.01        10
+ 
+            Single Excitations              0.00         1
+                FNO generation              0.00         0
+                        Forces              0.00         0
+ 
+                 -------------------------------------
+ 
+        Total chi polarization              0.02         1
+             ERI basis transform            0.00         2
+              Build 2 particle H            0.00         1
+                       Common part          0.00         1
+                        TDDFT part          0.00         0
+                          BSE part          0.00         0
+              Diago 2 particle H            0.00         1
+                         Build W            0.02         1
+                Optical spectrum            0.00         0
+ 
+                GW self-energy              0.00         1
+               MP2 self-energy              0.00         0
+           GWGamma self-energy              0.00         0
+                    MP2 energy              0.00         0
+                Full CI for 2e              0.00         0
+ 
+                 -------------------------------------
+
+ SUMMARY of all the WARNINGS issued during the run:
+
+ 1.     small complex number is  5.00E-03                                                                   
+
+
+
+ This is the end
+

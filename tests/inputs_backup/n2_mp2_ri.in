@@ -1,0 +1,21 @@
+&molgw
+ scf='hf'
+ nscf=30
+ tolscf=1.0e-10
+
+ basis='cc-pVTZ'
+ auxil_basis='cc-pVTZ-RI'
+
+ postscf='mp2_selfenergy'
+ selfenergy_state_min=1
+ selfenergy_state_max=12
+ nomega_sigma=21
+ step_sigma=0.01
+
+ mpi_nproc_ortho=2
+
+ natom=2
+/
+7            .000000     .000000     .564990
+7            .000000     .000000    -.564990
+

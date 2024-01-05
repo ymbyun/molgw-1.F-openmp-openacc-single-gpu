@@ -1,0 +1,1416 @@
+ ======================================================================
+
+
+            Welcome to the fascinating world of MOLGW
+
+                        version 1.F
+
+
+ ======================================================================
+
+ MOLGW commit git SHA: Stopping at filesystem boundary (GIT_DIS
+
+ Today is 11/15/2018
+ It is now 21:46
+ And it is perfect time to work
+
+ Linking options:
+ Running with LIBXC
+ Running with MPI
+ Running with SCALAPACK
+ Running with LIBINT (to calculate the Coulomb integrals)
+      max angular momentum handled by your LIBINT compilation:     7   k
+ Using LIBINT for the one-body parts of the Hamiltonian as well
+ 
+ 
+ Opening input file: co2.in
+
+  === Echo the entire list of input variables  ===
+
+                      scf      lda                     
+                  postscf      gw                      
+              move_nuclei      no                                                                                                  
+                    nstep        50
+                 tolforce    1.00000000E-05
+             alpha_hybrid    0.00000000E+00
+              beta_hybrid    0.00000000E+00
+             gamma_hybrid    1.00000000E+06
+                    basis      6-31G                                                                                               
+              auxil_basis                                                                                                          
+               basis_path      ../../../basis                                                                                      
+              small_basis                                                                                                          
+          ecp_small_basis                                                                                                          
+            gaussian_type      cart
+                    nspin         1
+                   charge    0.00000000E+00
+            magnetization    0.00000000E+00
+              temperature    0.00000000E+00
+             grid_quality      high        
+       tddft_grid_quality      high        
+         integral_quality      high        
+         partition_scheme      ssf         
+                     nscf        30
+             alpha_mixing    7.00000000E-01
+            mixing_scheme      pulay       
+              diis_switch    5.00000000E-02
+    level_shifting_energy    0.00000000E+00
+         init_hamiltonian      guess       
+                   tolscf    1.00000000E-09
+              min_overlap    1.00000000E-05
+              npulay_hist         8
+                      tda      no 
+                  triplet      no 
+              nexcitation         0
+                   toldav    1.00000000E-04
+               frozencore      yes
+                   ncoreg         0
+                   ncorew         0
+                nvirtualg    100000
+                nvirtualw    100000
+              nvirtualspa    100000
+              nomega_imag         0
+     selfenergy_state_min        11
+     selfenergy_state_max        12
+   selfenergy_state_range    100000
+             nomega_sigma        51
+               step_sigma    1.00000000E-02
+           ignore_restart      no 
+        ignore_bigrestart      no 
+             print_matrix      no 
+                print_eri      no 
+                print_wfn      no 
+               print_cube      no 
+                  print_w      no 
+            print_restart      yes
+         print_bigrestart      yes
+              print_sigma      yes
+               print_pdos      no 
+          print_multipole      no 
+              length_unit      angstrom    
+                    natom         3
+                 xyz_file                                                                                                          
+                   nghost         0
+                      eta    1.00000000E-03
+                  scissor    0.00000000E+00
+              grid_memory    4.00000000E+02
+      scalapack_block_min       400
+          scalapack_nprow         1
+          scalapack_npcol         1
+          mpi_nproc_ortho         1
+             alpha_cohsex    1.00000000E+00
+              beta_cohsex    1.00000000E+00
+                 dft_core         0
+             gamma_cohsex    0.00000000E+00
+             delta_cohsex    0.00000000E+00
+           epsilon_cohsex    0.00000000E+00
+              virtual_fno      no 
+                rcut_mbpt    1.00000000E+00
+            gwgamma_tddft      no 
+                 ecp_type                                                                                                          
+             ecp_elements                                                                                                          
+              ecp_quality      high        
+                ecp_basis                                                                                                          
+          ecp_auxil_basis                                                                                                          
+
+  ================================================
+
+   XC functional    1 :  Slater exchange
+   XC functional    2 :  Perdew & Wang
+
+ Summary of the input parameters 
+
+       Calculation type:   LDA+GW                                                                                              
+               SCF type:   LDA                                                                                                 
+          Post SCF type:   GW                                                                                                  
+                  Natom:   3
+                  Nghost:  0
+              Electrons:  22.0000
+                 Charge:   0.0000
+          Magnetization:   0.0000
+              Basis set:   6-31G                                                                                               
+    Auxiliary basis set:                                                                                                       
+          Gaussian type:   CART
+         Basis file path:  ../../../basis                                                                                      
+      Spin polarization:   1
+              SCF steps:  30
+                 Mixing:   0.7000
+           Grid quality:   HIGH        
+       Integral quality:   HIGH        
+ 
+        IO options:
+        - matrices details:     F
+        - ERI file:             F
+        - ignore big RESTART:   F
+        - plot some wfns:       F
+        - dump spectral functs  F
+        - dump self-energy      T
+        - RESTART files         T
+        - big RESTART file      T
+
+ ================================
+       Atom list
+                        bohr                                        angstrom
+ atom    1   O:      0.000000    -1.261014     0.000000           0.000000    -0.667300     0.000000
+ atom    2   O:      4.348260    -1.261014     0.000000           2.301000    -0.667300     0.000000
+ atom    3   C:      2.174130     0.000000     0.000000           1.150500     0.000000     0.000000
+ ================================
+
+ Number of bonds     2
+ Molecule does not have inversion symmetry
+ Molecule is not linear
+ Molecule is planar
+ 
+
+ ==== MPI info
+                                   Number of proc:      1
+                                   nproc_grid:          1
+                                   nproc_auxil:         1
+                                   nproc_ortho:         1
+                                   Master proc is:      0
+                      Parallelize auxiliary basis:      T
+                       Parallelize XC grid points:      T
+                                    Use SCALAPACK:      T
+                         Parallel using a buffer :      T
+
+
+
+ Setting up the cartesian to pure transforms up to l=  7
+ Transformations set up completed for both CARTESIAN and PURE Gaussians
+ 
+ Setting up the basis set for wavefunctions
+ 
+                  Total number of basis functions:      27
+                                 Number of shells:      15
+        Maximum angular momentum in the basis set:       1
+                                                         p
+ Basis set is fit and ready
+
+
+ Tolerance on integrals set to  1.00E-08
+
+ Cauchy-Schwartz screening of the 3- or 4-center integrals
+
+ Non negligible shellpairs to be computed     119  over a total of     120
+ Saving (%):       0.0083
+   Allocate:                          index pair,  Mem:   +0.001 (Mb),  Total Mem:    0.001 (Mb)
+   Allocate:                         index basis,  Mem:   +0.003 (Mb),  Total Mem:    0.004 (Mb)
+
+ Number of integrals to be stored:        71253
+   Allocate:                  4-center integrals,  Mem:   +0.544 (Mb),  Total Mem:    0.548 (Mb)
+
+ Calculate and store the 4-center Coulomb integrals
+ All ERI have been calculated
+
+   Allocate:                    Overlap matrix S,  Mem:   +0.006 (Mb),  Total Mem:    0.553 (Mb)
+   Allocate:                  Kinetic operator T,  Mem:   +0.006 (Mb),  Total Mem:    0.559 (Mb)
+   Allocate:                  Nucleus operator V,  Mem:   +0.006 (Mb),  Total Mem:    0.565 (Mb)
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    0.570 (Mb)
+
+ Setup overlap matrix S (LIBINT)
+
+ Calculate overlap matrix square-root S^{1/2}
+   Allocate:               Overlap sqrt S^{-1/2},  Mem:   +0.006 (Mb),  Total Mem:    0.576 (Mb)
+
+ Filtering basis functions that induce overcompleteness
+   Lowest S eigenvalue is            2.05E-02
+   Tolerance on overlap eigenvalues  1.00E-05
+   Retaining    27 among    27
+   Allocate:                     Wavefunctions C,  Mem:   +0.006 (Mb),  Total Mem:    0.581 (Mb)
+
+ === Occupations ===
+   6      2.00000
+   7      2.00000
+   8      2.00000
+   9      2.00000
+  10      2.00000
+  11      2.00000
+  12      0.00000
+  13      0.00000
+  14      0.00000
+  15      0.00000
+  16      0.00000
+ 
+
+ No RESTART file found
+
+ Setup kinetic part of the Hamiltonian (LIBINT)
+
+ Setup nucleus-electron part of the Hamiltonian (LIBINT)
+
+ Calculate approximate HXC potential with a superposition of atomic densities
+ Simple LDA functional on a coarse grid
+
+ Distributing the grid among procs
+ Maximum number of grid points for a single proc        1030
+
+ Setup the DFT quadrature
+ discretization grid per atom [radial , angular max - angular min]   25   26    6
+ total number of real-space points for this processor    1030
+
+ Number of electrons:     21.999456
+      XC energy (Ha):    -20.595292
+
+ Approximate hamiltonian
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    0.576 (Mb)
+
+ SCALAPACK info: size of the local matrix for proc #    27 x     27         0
+   Allocate:                 Hamiltonian history,  Mem:   +0.044 (Mb),  Total Mem:    0.620 (Mb)
+   Allocate:              Density matrix history,  Mem:   +0.006 (Mb),  Total Mem:    0.626 (Mb)
+   Allocate:                    Residual history,  Mem:   +0.044 (Mb),  Total Mem:    0.670 (Mb)
+   Allocate:                 Total Hamiltonian H,  Mem:   +0.006 (Mb),  Total Mem:    0.676 (Mb)
+   Allocate:                Hartree potential Vh,  Mem:   +0.006 (Mb),  Total Mem:    0.681 (Mb)
+   Allocate:              Exchange operator Sigx,  Mem:   +0.006 (Mb),  Total Mem:    0.687 (Mb)
+   Allocate:                     XC operator Vxc,  Mem:   +0.006 (Mb),  Total Mem:    0.693 (Mb)
+   Allocate:                    Density matrix P,  Mem:   +0.006 (Mb),  Total Mem:    0.698 (Mb)
+
+ Distributing the grid among procs
+ Maximum number of grid points for a single proc       11642
+
+ Setup the DFT quadrature
+ discretization grid per atom [radial , angular max - angular min]   60  110   38
+ total number of real-space points for this processor   11642
+ Precalculate the functions on N grid points   11584
+   which corresponds to   181 batches of size   64
+   Allocate:                  basis ftns on grid,  Mem:   +2.386 (Mb),  Total Mem:    3.084 (Mb)
+ Build density matrix
+
+-------------------------------------------
+ *** SCF cycle No:    1
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999896
+  DFT xc energy (Ha):    -21.286142
+
+
+ Pulay DIIS mixing
+  Residuals:       1.54568E+00
+ Alpha DIIS:       1.000000
+ DIIS predicted residual:   1.54568E+00
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.27505   -497.28937      2.0000
+   2    -18.27502   -497.28852      2.0000
+   3    -10.36022   -281.91587      2.0000
+   4     -0.99231    -27.00206      2.0000
+   5     -0.86046    -23.41435      2.0000
+   6     -0.57912    -15.75861      2.0000
+   7     -0.48392    -13.16826      2.0000
+   8     -0.35025     -9.53088      2.0000
+   9     -0.32303     -8.79016      2.0000
+  10     -0.13119     -3.56999      2.0000
+  11     -0.12481     -3.39634      2.0000
+  -----------------------------
+  12     -0.11471     -3.12134      0.0000
+  13     -0.04454     -1.21201      0.0000
+  14      0.17508      4.76422      0.0000
+  15      0.21202      5.76928      0.0000
+  16      0.30133      8.19962      0.0000
+  17      0.34510      9.39072      0.0000
+  18      0.39090     10.63689      0.0000
+  19      0.48749     13.26540      0.0000
+  20      0.93833     25.53321      0.0000
+  21      0.96710     26.31613      0.0000
+  22      1.00001     27.21158      0.0000
+  23      1.00324     27.29948      0.0000
+  24      1.01607     27.64861      0.0000
+  25      1.11151     30.24580      0.0000
+  26      1.54289     41.98423      0.0000
+  27      1.61090     43.83486      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -3.396343
+ gKS LUMO energy    (eV):      -3.121344
+ gKS HOMO-LUMO gap  (eV):       0.274999
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      189.1232223050
+    Nucleus Energy  (Ha):     -553.4790329106
+    Hartree Energy  (Ha):      146.0060964128
+    XC Energy       (Ha):      -21.2861423165
+
+    Total Energy    (Ha):     -186.7215018645
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.62483E+00
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    2
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999807
+  DFT xc energy (Ha):    -20.304878
+
+
+ Pulay DIIS mixing
+  Residuals:       4.15513E+00   1.54568E+00
+ Alpha DIIS:       0.247178      0.752822
+ DIIS predicted residual:   7.69180E-01
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.65287   -507.57056      2.0000
+   2    -18.65285   -507.56986      2.0000
+   3     -9.91056   -269.68007      2.0000
+   4     -0.99795    -27.15560      2.0000
+   5     -0.91542    -24.90972      2.0000
+   6     -0.48534    -13.20678      2.0000
+   7     -0.40911    -11.13235      2.0000
+   8     -0.39665    -10.79340      2.0000
+   9     -0.39524    -10.75500      2.0000
+  10     -0.28109     -7.64872      2.0000
+  11     -0.26728     -7.27298      2.0000
+  -----------------------------
+  12     -0.19970     -5.43410      0.0000
+  13     -0.07302     -1.98702      0.0000
+  14      0.18930      5.15108      0.0000
+  15      0.20155      5.48438      0.0000
+  16      0.46710     12.71040      0.0000
+  17      0.46878     12.75628      0.0000
+  18      0.49391     13.44011      0.0000
+  19      0.53839     14.65026      0.0000
+  20      0.80702     21.96020      0.0000
+  21      0.84375     22.95964      0.0000
+  22      0.85687     23.31661      0.0000
+  23      0.88867     24.18200      0.0000
+  24      0.89991     24.48787      0.0000
+  25      0.98543     26.81496      0.0000
+  26      1.47428     40.11727      0.0000
+  27      1.54142     41.94422      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -7.272977
+ gKS LUMO energy    (eV):      -5.434100
+ gKS HOMO-LUMO gap  (eV):       1.838877
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      182.3772277621
+    Nucleus Energy  (Ha):     -539.3774824302
+    Hartree Energy  (Ha):      139.7306123435
+    XC Energy       (Ha):      -20.3048782977
+
+    Total Energy    (Ha):     -184.6601659775
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.41543E+00
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    3
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999889
+  DFT xc energy (Ha):    -20.760967
+
+
+ Pulay DIIS mixing
+  Residuals:       2.18469E-01   4.15513E+00   1.54568E+00
+ Alpha DIIS:       0.837934      0.036746      0.125321
+ DIIS predicted residual:   1.61596E-01
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.75133   -510.24963      2.0000
+   2    -18.75130   -510.24895      2.0000
+   3    -10.05254   -273.54342      2.0000
+   4     -1.05496    -28.70694      2.0000
+   5     -0.97001    -26.39531      2.0000
+   6     -0.53698    -14.61190      2.0000
+   7     -0.46326    -12.60600      2.0000
+   8     -0.44453    -12.09637      2.0000
+   9     -0.44319    -12.05988      2.0000
+  10     -0.32539     -8.85418      2.0000
+  11     -0.30997     -8.43470      2.0000
+  -----------------------------
+  12     -0.25358     -6.90019      0.0000
+  13     -0.12957     -3.52573      0.0000
+  14      0.13869      3.77396      0.0000
+  15      0.15924      4.33312      0.0000
+  16      0.42199     11.48305      0.0000
+  17      0.42563     11.58188      0.0000
+  18      0.43911     11.94874      0.0000
+  19      0.49262     13.40475      0.0000
+  20      0.77724     21.14984      0.0000
+  21      0.80927     22.02136      0.0000
+  22      0.82266     22.38560      0.0000
+  23      0.85433     23.24761      0.0000
+  24      0.86755     23.60719      0.0000
+  25      0.95644     26.02618      0.0000
+  26      1.43964     39.17470      0.0000
+  27      1.50608     40.98257      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.434705
+ gKS LUMO energy    (eV):      -6.900192
+ gKS HOMO-LUMO gap  (eV):       1.534513
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      185.7075477163
+    Nucleus Energy  (Ha):     -546.8006061055
+    Hartree Energy  (Ha):      141.9681053509
+    XC Energy       (Ha):      -20.7609666365
+
+    Total Energy    (Ha):     -186.9715650301
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.26036E-01
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    4
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999892
+  DFT xc energy (Ha):    -20.879188
+
+
+ Pulay DIIS mixing
+  Residuals:       1.38786E-01   2.18469E-01   4.15513E+00   1.54568E+00
+ Alpha DIIS:       0.593403      0.361280      0.001350      0.043967
+ DIIS predicted residual:   1.41465E-02
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.72013   -509.40074      2.0000
+   2    -18.72011   -509.40005      2.0000
+   3    -10.00523   -272.25615      2.0000
+   4     -1.03601    -28.19136      2.0000
+   5     -0.95238    -25.91569      2.0000
+   6     -0.52240    -14.21525      2.0000
+   7     -0.44929    -12.22574      2.0000
+   8     -0.42850    -11.66018      2.0000
+   9     -0.42686    -11.61536      2.0000
+  10     -0.31290     -8.51432      2.0000
+  11     -0.29688     -8.07861      2.0000
+  -----------------------------
+  12     -0.23720     -6.45444      0.0000
+  13     -0.11117     -3.02502      0.0000
+  14      0.15592      4.24272      0.0000
+  15      0.17494      4.76025      0.0000
+  16      0.43809     11.92113      0.0000
+  17      0.44054     11.98773      0.0000
+  18      0.45794     12.46122      0.0000
+  19      0.50751     13.81016      0.0000
+  20      0.78657     21.40353      0.0000
+  21      0.81902     22.28679      0.0000
+  22      0.82934     22.56750      0.0000
+  23      0.86191     23.45369      0.0000
+  24      0.87652     23.85145      0.0000
+  25      0.96477     26.25262      0.0000
+  26      1.45032     39.46533      0.0000
+  27      1.51771     41.29894      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.078609
+ gKS LUMO energy    (eV):      -6.454436
+ gKS HOMO-LUMO gap  (eV):       1.624174
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.6859245629
+    Nucleus Energy  (Ha):     -548.7540457783
+    Hartree Energy  (Ha):      143.0580104044
+    XC Energy       (Ha):      -20.8791875303
+
+    Total Energy    (Ha):     -186.9749436965
+
+ Build density matrix
+ Convergence criterium on the density matrix   8.96988E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    5
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.855002
+
+
+ Pulay DIIS mixing
+  Residuals:       1.44468E-02   1.38786E-01   2.18469E-01   4.15513E+00   1.54568E+00
+ Alpha DIIS:       0.753293      0.160219      0.083680     -0.000439      0.003247
+ DIIS predicted residual:   2.30659E-03
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71946   -509.38254      2.0000
+   2    -18.71944   -509.38185      2.0000
+   3    -10.00421   -272.22843      2.0000
+   4     -1.03515    -28.16776      2.0000
+   5     -0.95176    -25.89867      2.0000
+   6     -0.52171    -14.19655      2.0000
+   7     -0.44825    -12.19740      2.0000
+   8     -0.42805    -11.64783      2.0000
+   9     -0.42675    -11.61257      2.0000
+  10     -0.31219     -8.49519      2.0000
+  11     -0.29615     -8.05873      2.0000
+  -----------------------------
+  12     -0.23731     -6.45763      0.0000
+  13     -0.11094     -3.01879      0.0000
+  14      0.15680      4.26677      0.0000
+  15      0.17458      4.75064      0.0000
+  16      0.43777     11.91226      0.0000
+  17      0.44053     11.98732      0.0000
+  18      0.45794     12.46110      0.0000
+  19      0.50789     13.82046      0.0000
+  20      0.78697     21.41459      0.0000
+  21      0.81954     22.30081      0.0000
+  22      0.83032     22.59419      0.0000
+  23      0.86271     23.47542      0.0000
+  24      0.87701     23.86454      0.0000
+  25      0.96527     26.26639      0.0000
+  26      1.45077     39.47751      0.0000
+  27      1.51812     41.31007      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.058733
+ gKS LUMO energy    (eV):      -6.457628
+ gKS HOMO-LUMO gap  (eV):       1.601105
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4376727808
+    Nucleus Energy  (Ha):     -548.2851285029
+    Hartree Energy  (Ha):      142.8105171017
+    XC Energy       (Ha):      -20.8550024857
+
+    Total Energy    (Ha):     -186.9775864613
+
+ Build density matrix
+ Convergence criterium on the density matrix   1.28068E-02
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    6
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.851644
+
+
+ Pulay DIIS mixing
+  Residuals:       5.31534E-03   1.44468E-02   1.38786E-01   2.18469E-01   4.15513E+00   1.54568E+00
+ Alpha DIIS:       0.827813      0.158802      0.004885      0.006695     -0.000020      0.001824
+ DIIS predicted residual:   3.87868E-04
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71967   -509.38806      2.0000
+   2    -18.71964   -509.38738      2.0000
+   3    -10.00397   -272.22180      2.0000
+   4     -1.03527    -28.17105      2.0000
+   5     -0.95186    -25.90142      2.0000
+   6     -0.52173    -14.19699      2.0000
+   7     -0.44831    -12.19926      2.0000
+   8     -0.42808    -11.64877      2.0000
+   9     -0.42675    -11.61240      2.0000
+  10     -0.31231     -8.49836      2.0000
+  11     -0.29630     -8.06273      2.0000
+  -----------------------------
+  12     -0.23724     -6.45550      0.0000
+  13     -0.11091     -3.01801      0.0000
+  14      0.15670      4.26400      0.0000
+  15      0.17467      4.75310      0.0000
+  16      0.43790     11.91599      0.0000
+  17      0.44060     11.98921      0.0000
+  18      0.45802     12.46337      0.0000
+  19      0.50790     13.82071      0.0000
+  20      0.78688     21.41218      0.0000
+  21      0.81945     22.29843      0.0000
+  22      0.83023     22.59162      0.0000
+  23      0.86263     23.47334      0.0000
+  24      0.87693     23.86247      0.0000
+  25      0.96517     26.26374      0.0000
+  26      1.45070     39.47554      0.0000
+  27      1.51804     41.30801      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062730
+ gKS LUMO energy    (eV):      -6.455502
+ gKS HOMO-LUMO gap  (eV):       1.607228
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4215819061
+    Nucleus Energy  (Ha):     -548.2457017629
+    Hartree Energy  (Ha):      142.7837915482
+    XC Energy       (Ha):      -20.8516436058
+
+    Total Energy    (Ha):     -186.9776172696
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.34607E-03
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    7
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.852398
+
+
+ Pulay DIIS mixing
+  Residuals:       5.98457E-04   5.31534E-03   1.44468E-02   1.38786E-01   2.18469E-01   4.15513E+00   1.54568E+00
+ Alpha DIIS:       0.922996      0.060880      0.018483     -0.002315     -0.000268     -0.000012      0.000237
+ DIIS predicted residual:   5.47834E-05
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71966   -509.38789      2.0000
+   2    -18.71964   -509.38720      2.0000
+   3    -10.00391   -272.22036      2.0000
+   4     -1.03524    -28.17041      2.0000
+   5     -0.95184    -25.90087      2.0000
+   6     -0.52173    -14.19712      2.0000
+   7     -0.44832    -12.19947      2.0000
+   8     -0.42807    -11.64836      2.0000
+   9     -0.42673    -11.61200      2.0000
+  10     -0.31231     -8.49831      2.0000
+  11     -0.29629     -8.06259      2.0000
+  -----------------------------
+  12     -0.23722     -6.45519      0.0000
+  13     -0.11089     -3.01757      0.0000
+  14      0.15672      4.26444      0.0000
+  15      0.17469      4.75365      0.0000
+  16      0.43792     11.91645      0.0000
+  17      0.44061     11.98972      0.0000
+  18      0.45804     12.46400      0.0000
+  19      0.50792     13.82111      0.0000
+  20      0.78688     21.41222      0.0000
+  21      0.81945     22.29849      0.0000
+  22      0.83021     22.59121      0.0000
+  23      0.86262     23.47315      0.0000
+  24      0.87693     23.86247      0.0000
+  25      0.96518     26.26376      0.0000
+  26      1.45071     39.47581      0.0000
+  27      1.51805     41.30837      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062589
+ gKS LUMO energy    (eV):      -6.455188
+ gKS HOMO-LUMO gap  (eV):       1.607401
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4255433720
+    Nucleus Energy  (Ha):     -548.2544407344
+    Hartree Energy  (Ha):      142.7893202981
+    XC Energy       (Ha):      -20.8523983360
+
+    Total Energy    (Ha):     -186.9776207555
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.49015E-04
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    8
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.852435
+
+
+ Pulay DIIS mixing
+  Residuals:       1.91081E-04   5.98457E-04   5.31534E-03   1.44468E-02   1.38786E-01   2.18469E-01   4.15513E+00   1.54568E+00
+ Alpha DIIS:       0.883222      0.149297     -0.029574     -0.001814     -0.000845     -0.000312      0.000000      0.000027
+ DIIS predicted residual:   8.06216E-06
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71967   -509.38806      2.0000
+   2    -18.71964   -509.38738      2.0000
+   3    -10.00390   -272.22010      2.0000
+   4     -1.03525    -28.17050      2.0000
+   5     -0.95184    -25.90097      2.0000
+   6     -0.52174    -14.19714      2.0000
+   7     -0.44832    -12.19954      2.0000
+   8     -0.42807    -11.64838      2.0000
+   9     -0.42673    -11.61200      2.0000
+  10     -0.31231     -8.49843      2.0000
+  11     -0.29630     -8.06275      2.0000
+  -----------------------------
+  12     -0.23722     -6.45514      0.0000
+  13     -0.11089     -3.01753      0.0000
+  14      0.15671      4.26439      0.0000
+  15      0.17470      4.75371      0.0000
+  16      0.43793     11.91659      0.0000
+  17      0.44062     11.98981      0.0000
+  18      0.45805     12.46409      0.0000
+  19      0.50792     13.82114      0.0000
+  20      0.78688     21.41211      0.0000
+  21      0.81945     22.29840      0.0000
+  22      0.83021     22.59111      0.0000
+  23      0.86262     23.47307      0.0000
+  24      0.87693     23.86239      0.0000
+  25      0.96517     26.26365      0.0000
+  26      1.45071     39.47574      0.0000
+  27      1.51805     41.30830      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062745
+ gKS LUMO energy    (eV):      -6.455142
+ gKS HOMO-LUMO gap  (eV):       1.607604
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4256453361
+    Nucleus Energy  (Ha):     -548.2546667198
+    Hartree Energy  (Ha):      142.7894811930
+    XC Energy       (Ha):      -20.8524352482
+
+    Total Energy    (Ha):     -186.9776207941
+
+ Build density matrix
+ Convergence criterium on the density matrix   9.23227E-05
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:    9
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.852466
+
+
+ Pulay DIIS mixing
+  Residuals:       3.10856E-06   1.91081E-04   5.98457E-04   5.31534E-03   1.44468E-02   1.38786E-01   2.18469E-01   4.15513E+00
+ Alpha DIIS:       0.904084      0.094857      0.005366     -0.003999     -0.000229     -0.000056     -0.000024      0.000000
+ DIIS predicted residual:   3.02657E-07
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71967   -509.38806      2.0000
+   2    -18.71964   -509.38737      2.0000
+   3    -10.00390   -272.22009      2.0000
+   4     -1.03525    -28.17050      2.0000
+   5     -0.95184    -25.90097      2.0000
+   6     -0.52174    -14.19714      2.0000
+   7     -0.44832    -12.19954      2.0000
+   8     -0.42807    -11.64838      2.0000
+   9     -0.42673    -11.61200      2.0000
+  10     -0.31231     -8.49843      2.0000
+  11     -0.29630     -8.06274      2.0000
+  -----------------------------
+  12     -0.23722     -6.45514      0.0000
+  13     -0.11089     -3.01753      0.0000
+  14      0.15671      4.26439      0.0000
+  15      0.17470      4.75372      0.0000
+  16      0.43793     11.91660      0.0000
+  17      0.44062     11.98981      0.0000
+  18      0.45805     12.46410      0.0000
+  19      0.50792     13.82114      0.0000
+  20      0.78688     21.41212      0.0000
+  21      0.81945     22.29840      0.0000
+  22      0.83021     22.59111      0.0000
+  23      0.86262     23.47307      0.0000
+  24      0.87693     23.86239      0.0000
+  25      0.96517     26.26365      0.0000
+  26      1.45071     39.47574      0.0000
+  27      1.51805     41.30830      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062743
+ gKS LUMO energy    (eV):      -6.455139
+ gKS HOMO-LUMO gap  (eV):       1.607604
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4258076166
+    Nucleus Energy  (Ha):     -548.2550183577
+    Hartree Energy  (Ha):      142.7897011882
+    XC Energy       (Ha):      -20.8524658904
+
+    Total Energy    (Ha):     -186.9776207985
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.31220E-06
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   10
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.852466
+
+
+ Pulay DIIS mixing
+  Residuals:       6.51506E-07   3.10856E-06   1.91081E-04   5.98457E-04   5.31534E-03   1.44468E-02   1.38786E-01   2.18469E-01
+ Alpha DIIS:       0.242161      0.685887      0.071016      0.004151     -0.002990     -0.000166     -0.000042     -0.000018
+ DIIS predicted residual:   2.39877E-07
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71967   -509.38806      2.0000
+   2    -18.71964   -509.38737      2.0000
+   3    -10.00390   -272.22009      2.0000
+   4     -1.03525    -28.17050      2.0000
+   5     -0.95184    -25.90097      2.0000
+   6     -0.52174    -14.19714      2.0000
+   7     -0.44832    -12.19954      2.0000
+   8     -0.42807    -11.64838      2.0000
+   9     -0.42673    -11.61200      2.0000
+  10     -0.31231     -8.49843      2.0000
+  11     -0.29630     -8.06274      2.0000
+  -----------------------------
+  12     -0.23722     -6.45514      0.0000
+  13     -0.11089     -3.01753      0.0000
+  14      0.15671      4.26439      0.0000
+  15      0.17470      4.75372      0.0000
+  16      0.43793     11.91660      0.0000
+  17      0.44062     11.98981      0.0000
+  18      0.45805     12.46410      0.0000
+  19      0.50792     13.82114      0.0000
+  20      0.78688     21.41212      0.0000
+  21      0.81945     22.29840      0.0000
+  22      0.83021     22.59111      0.0000
+  23      0.86262     23.47307      0.0000
+  24      0.87693     23.86239      0.0000
+  25      0.96517     26.26365      0.0000
+  26      1.45071     39.47574      0.0000
+  27      1.51805     41.30830      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062743
+ gKS LUMO energy    (eV):      -6.455139
+ gKS HOMO-LUMO gap  (eV):       1.607604
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4258077710
+    Nucleus Energy  (Ha):     -548.2550190749
+    Hartree Energy  (Ha):      142.7897019220
+    XC Energy       (Ha):      -20.8524660614
+
+    Total Energy    (Ha):     -186.9776207985
+
+ Build density matrix
+ Convergence criterium on the density matrix   8.85126E-07
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   11
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.852466
+
+
+ Pulay DIIS mixing
+  Residuals:       8.21346E-07   6.51506E-07   3.10856E-06   1.91081E-04   5.98457E-04   5.31534E-03   1.44468E-02   1.38786E-01
+ Alpha DIIS:       0.418160      0.547804      0.032764      0.001137      0.000186     -0.000052      0.000001     -0.000000
+ DIIS predicted residual:   1.22853E-08
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71967   -509.38806      2.0000
+   2    -18.71964   -509.38737      2.0000
+   3    -10.00390   -272.22009      2.0000
+   4     -1.03525    -28.17050      2.0000
+   5     -0.95184    -25.90097      2.0000
+   6     -0.52174    -14.19714      2.0000
+   7     -0.44832    -12.19954      2.0000
+   8     -0.42807    -11.64838      2.0000
+   9     -0.42673    -11.61200      2.0000
+  10     -0.31231     -8.49843      2.0000
+  11     -0.29630     -8.06274      2.0000
+  -----------------------------
+  12     -0.23722     -6.45514      0.0000
+  13     -0.11089     -3.01753      0.0000
+  14      0.15671      4.26439      0.0000
+  15      0.17470      4.75372      0.0000
+  16      0.43793     11.91660      0.0000
+  17      0.44062     11.98981      0.0000
+  18      0.45805     12.46410      0.0000
+  19      0.50792     13.82114      0.0000
+  20      0.78688     21.41211      0.0000
+  21      0.81945     22.29840      0.0000
+  22      0.83021     22.59111      0.0000
+  23      0.86262     23.47307      0.0000
+  24      0.87693     23.86239      0.0000
+  25      0.96517     26.26365      0.0000
+  26      1.45071     39.47574      0.0000
+  27      1.51805     41.30830      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062743
+ gKS LUMO energy    (eV):      -6.455139
+ gKS HOMO-LUMO gap  (eV):       1.607604
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4258076704
+    Nucleus Energy  (Ha):     -548.2550188652
+    Hartree Energy  (Ha):      142.7897017942
+    XC Energy       (Ha):      -20.8524660427
+
+    Total Energy    (Ha):     -186.9776207985
+
+ Build density matrix
+ Convergence criterium on the density matrix   5.03466E-07
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   12
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.852466
+
+
+ Pulay DIIS mixing
+  Residuals:       2.00130E-09   8.21346E-07   6.51506E-07   3.10856E-06   1.91081E-04   5.98457E-04   5.31534E-03   1.44468E-02
+ Alpha DIIS:       0.942350      0.025099      0.032226      0.000323     -0.000001      0.000002      0.000001     -0.000000
+ DIIS predicted residual:   5.39093E-10
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71967   -509.38806      2.0000
+   2    -18.71964   -509.38737      2.0000
+   3    -10.00390   -272.22009      2.0000
+   4     -1.03525    -28.17050      2.0000
+   5     -0.95184    -25.90097      2.0000
+   6     -0.52174    -14.19714      2.0000
+   7     -0.44832    -12.19954      2.0000
+   8     -0.42807    -11.64838      2.0000
+   9     -0.42673    -11.61200      2.0000
+  10     -0.31231     -8.49843      2.0000
+  11     -0.29630     -8.06274      2.0000
+  -----------------------------
+  12     -0.23722     -6.45514      0.0000
+  13     -0.11089     -3.01753      0.0000
+  14      0.15671      4.26439      0.0000
+  15      0.17470      4.75372      0.0000
+  16      0.43793     11.91660      0.0000
+  17      0.44062     11.98981      0.0000
+  18      0.45805     12.46410      0.0000
+  19      0.50792     13.82114      0.0000
+  20      0.78688     21.41211      0.0000
+  21      0.81945     22.29840      0.0000
+  22      0.83021     22.59111      0.0000
+  23      0.86262     23.47307      0.0000
+  24      0.87693     23.86239      0.0000
+  25      0.96517     26.26365      0.0000
+  26      1.45071     39.47574      0.0000
+  27      1.51805     41.30830      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062743
+ gKS LUMO energy    (eV):      -6.455139
+ gKS HOMO-LUMO gap  (eV):       1.607604
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4258076616
+    Nucleus Energy  (Ha):     -548.2550188563
+    Hartree Energy  (Ha):      142.7897017905
+    XC Energy       (Ha):      -20.8524660392
+
+    Total Energy    (Ha):     -186.9776207985
+
+ Build density matrix
+ Convergence criterium on the density matrix   3.85856E-09
+  ===> convergence not reached yet
+ 
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    3.090 (Mb)
+
+ Writing a small RESTART file
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    3.084 (Mb)
+
+-------------------------------------------
+ *** SCF cycle No:   13
+
+ Calculate Hartree term
+ Calculate DFT XC potential
+ Using batches of size          64
+
+ Number of electrons:     21.999891
+  DFT xc energy (Ha):    -20.852466
+
+
+ Pulay DIIS mixing
+  Residuals:       4.58871E-10   2.00130E-09   8.21346E-07   6.51506E-07   3.10856E-06   1.91081E-04   5.98457E-04   5.31534E-03
+ Alpha DIIS:       0.903219      0.091250      0.002379      0.003057      0.000089      0.000005      0.000001     -0.000000
+ DIIS predicted residual:   2.45904E-11
+
+ Generalized diagonalization using SCALAPACK with a grid   1 x    1
+ Diagonalization for spin:   1
+
+ === Energies ===
+   #       (Ha)         (eV)      
+   1    -18.71967   -509.38806      2.0000
+   2    -18.71964   -509.38737      2.0000
+   3    -10.00390   -272.22009      2.0000
+   4     -1.03525    -28.17050      2.0000
+   5     -0.95184    -25.90097      2.0000
+   6     -0.52174    -14.19714      2.0000
+   7     -0.44832    -12.19954      2.0000
+   8     -0.42807    -11.64838      2.0000
+   9     -0.42673    -11.61200      2.0000
+  10     -0.31231     -8.49843      2.0000
+  11     -0.29630     -8.06274      2.0000
+  -----------------------------
+  12     -0.23722     -6.45514      0.0000
+  13     -0.11089     -3.01753      0.0000
+  14      0.15671      4.26439      0.0000
+  15      0.17470      4.75372      0.0000
+  16      0.43793     11.91660      0.0000
+  17      0.44062     11.98981      0.0000
+  18      0.45805     12.46410      0.0000
+  19      0.50792     13.82114      0.0000
+  20      0.78688     21.41211      0.0000
+  21      0.81945     22.29840      0.0000
+  22      0.83021     22.59111      0.0000
+  23      0.86262     23.47307      0.0000
+  24      0.87693     23.86239      0.0000
+  25      0.96517     26.26365      0.0000
+  26      1.45071     39.47574      0.0000
+  27      1.51805     41.30830      0.0000
+ 
+ 
+ gKS HOMO energy    (eV):      -8.062743
+ gKS LUMO energy    (eV):      -6.455139
+ gKS HOMO-LUMO gap  (eV):       1.607604
+ 
+ 
+    Nucleus-Nucleus (Ha):       52.9143546448
+    Kinetic Energy  (Ha):      186.4258076612
+    Nucleus Energy  (Ha):     -548.2550188543
+    Hartree Energy  (Ha):      142.7897017889
+    XC Energy       (Ha):      -20.8524660392
+
+    Total Energy    (Ha):     -186.9776207985
+
+ Build density matrix
+ Convergence criterium on the density matrix   2.26122E-10
+  ===> convergence has been reached
+ 
+
+ ==================================================
+ The SCF loop ends here
+ ==================================================
+ Deallocate:                 Hamiltonian history,  Mem:   -0.044 (Mb),  Total Mem:    3.040 (Mb)
+ Deallocate:                    Residual history,  Mem:   -0.044 (Mb),  Total Mem:    2.995 (Mb)
+ Deallocate:              Density matrix history,  Mem:   -0.006 (Mb),  Total Mem:    2.990 (Mb)
+ Deallocate:                  basis ftns on grid,  Mem:   -2.386 (Mb),  Total Mem:    0.604 (Mb)
+ Calculate Exchange term
+   Allocate:                     Fock operator F,  Mem:   +0.006 (Mb),  Total Mem:    0.609 (Mb)
+ Deallocate:                    Density matrix P,  Mem:   -0.006 (Mb),  Total Mem:    0.604 (Mb)
+ Deallocate:                 Total Hamiltonian H,  Mem:   -0.006 (Mb),  Total Mem:    0.598 (Mb)
+ Deallocate:                Hartree potential Vh,  Mem:   -0.006 (Mb),  Total Mem:    0.592 (Mb)
+ Deallocate:              Exchange operator Sigx,  Mem:   -0.006 (Mb),  Total Mem:    0.587 (Mb)
+ Deallocate:                     XC operator Vxc,  Mem:   -0.006 (Mb),  Total Mem:    0.581 (Mb)
+
+
+   SCF Total Energy (Ha):     -186.9776207985
+
+         EXX Energy (Ha):      -21.1817136563
+   Total EXX Energy (Ha):     -187.3068684157
+ Singles correction (Ha):       -0.0813287066
+     Est. HF Energy (Ha):     -187.3881971222
+
+
+ Writing a big RESTART file
+ Deallocate:                    Overlap matrix S,  Mem:   -0.006 (Mb),  Total Mem:    0.576 (Mb)
+ Deallocate:               Overlap sqrt S^{-1/2},  Mem:   -0.006 (Mb),  Total Mem:    0.570 (Mb)
+ Deallocate:                     Fock operator F,  Mem:   -0.006 (Mb),  Total Mem:    0.565 (Mb)
+ Deallocate:                  Kinetic operator T,  Mem:   -0.006 (Mb),  Total Mem:    0.559 (Mb)
+ Deallocate:                  Nucleus operator V,  Mem:   -0.006 (Mb),  Total Mem:    0.553 (Mb)
+
+
+ ==================================================
+ Self-energy evaluation starts here
+ ==================================================
+
+
+ WARNING: small complex number is  1.00E-03
+
+ WARNING: frozen core approximation in G switched on up to state =    3
+ Calculate state range from   11 to   12
+
+ WARNING: frozen core approximation in W switched on up to state =    3
+
+ Prepare a polarizability spectral function with
+                               Occupied states:        8
+                                Virtual states:       16
+                              Transition space:      128
+
+ Try to read spectral function from file SCREENED_COULOMB
+ File does not exist
+
+
+ Calculating the polarizability
+ Singlet final state
+
+ SCALAPACK info: size of the local matrix for proc #   128 x    128         0
+   Allocate:                                 A+B,  Mem:   +0.125 (Mb),  Total Mem:    0.678 (Mb)
+   Allocate:                                 A-B,  Mem:   +0.125 (Mb),  Total Mem:    0.803 (Mb)
+
+ Build the electron-hole hamiltonian
+ Build Common part: Energies + Hartree + possibly Exchange
+ Content of Exchange:    0.000
+ Deallocate:                                 A-B,  Mem:   -0.125 (Mb),  Total Mem:    0.678 (Mb)
+
+ SCALAPACK info: size of the local matrix for proc #   128 x    128         0
+   Allocate:                                 X+Y,  Mem:   +0.125 (Mb),  Total Mem:    0.803 (Mb)
+
+ Performing the SCALAPACK block diago when A-B is diagonal
+ Deallocate (A+B) and possibly (A-B)
+ Deallocate:                                 A+B,  Mem:   -0.125 (Mb),  Total Mem:    0.678 (Mb)
+
+ Calculate the RPA energy using the Tamm-Dancoff decomposition
+ Eq. (9) from J. Chem. Phys. 132, 234114 (2010)
+
+ RPA correlation energy (Ha):    -0.5823654783
+
+ Lowest neutral excitation energy (eV):    2.531059
+
+ Build W = v * chi * v
+
+ Spectral function initialized with Coulomb basis functions:      378
+ Spectral function initialized with resonant poles         :      128
+   Allocate:                        Left residue,  Mem:   +0.369 (Mb),  Total Mem:    1.048 (Mb)
+ Deallocate eigenvector array
+ Deallocate:                                 X+Y,  Mem:   -0.125 (Mb),  Total Mem:    0.923 (Mb)
+
+ RPA Total energy (Ha):     -187.8892338940
+ 
+ Perform a one-shot G0W0 calculation
+   Allocate:                     Temporary array,  Mem:   +0.002 (Mb),  Total Mem:    0.925 (Mb)
+ Sigma_c(omega) is calculated
+ Deallocate:                     Temporary array,  Mem:   -0.002 (Mb),  Total Mem:    0.923 (Mb)
+ Deallocate:                        Left residue,  Mem:   -0.369 (Mb),  Total Mem:    0.553 (Mb)
+
+ Spectral function destroyed
+
+ Write Sigma(omega) on file
+ Writing selfenergy in file: selfenergy_GW_state011.dat
+ Writing selfenergy in file: selfenergy_GW_state012.dat
+
+ GW eigenvalues (eV)
+   #        E0         SigX-Vxc       SigC          Z        E_qp^lin     E_qp^graph
+  11     -8.062743    -5.409158     1.602069     0.804647   -11.126108   -11.039136
+  12     -6.455139     5.243666     0.756711     0.832066    -1.462427    -1.357914
+
+ Writing ENERGY_QP file
+ 
+ GW HOMO energy    (eV):     -11.039136
+ GW LUMO energy    (eV):      -1.357914
+ GW HOMO-LUMO gap  (eV):       9.681222
+ 
+ Deallocate:                     Wavefunctions C,  Mem:   -0.006 (Mb),  Total Mem:    0.548 (Mb)
+ Deallocate:                  4-center integrals,  Mem:   -0.544 (Mb),  Total Mem:    0.004 (Mb)
+ Deallocate:                          index pair,  Mem:   -0.001 (Mb),  Total Mem:    0.003 (Mb)
+ Deallocate:                         index basis,  Mem:   -0.003 (Mb),  Total Mem:    0.000 (Mb)
+
+                 ----------------------------
+
+                 --- Memory usage summary ---
+
+ Memory that was not deallocated properly
+                 Memory (Mb):     0.000
+
+ Maximum memory used during the run
+            Peak memory (Mb):     3.090
+ 
+
+                 --- Timings in (s) and # of calls ---
+
+                    Total time              1.19
+
+                 -------------------------------------
+
+                 Total pre SCF              0.33
+                     Total SCF              0.51
+                Total post SCF              0.35
+
+                 -------------------------------------
+
+            Integral screening              0.01         1
+            4-center integrals              0.29         1
+                     Overlap S              0.00         1
+            Approx Hamiltonian              0.02         1
+           Kinetic Hamiltonian              0.00         1
+   Electron-nuclei Hamiltonian              0.00         1
+               ECP Hamiltonian              0.00         0
+ 
+                 -------------------------------------
+ 
+               Grid generation              0.10         2
+                Density Matrix              0.00        14
+                       Hartree              0.15        13
+                      Exchange              0.02         1
+                        DFT xc              0.21        13
+             Hamiltonian diago              0.01        14
+                    Pulay DIIS              0.00        13
+          RESTART file writing              0.01        13
+ 
+            Single Excitations              0.00         1
+                FNO generation              0.00         0
+                        Forces              0.00         0
+ 
+                 -------------------------------------
+ 
+        Total chi polarization              0.33         1
+             ERI basis transform            0.29        16
+              Build 2 particle H            0.15         1
+                       Common part          0.15         1
+                        TDDFT part          0.00         0
+                          BSE part          0.00         0
+              Diago 2 particle H            0.01         1
+                         Build W            0.18         1
+                Optical spectrum            0.00         0
+ 
+                GW self-energy              0.01         1
+               MP2 self-energy              0.00         0
+           GWGamma self-energy              0.00         0
+                    MP2 energy              0.00         0
+                Full CI for 2e              0.00         0
+ 
+                 -------------------------------------
+
+ SUMMARY of all the WARNINGS issued during the run:
+
+ 1.     small complex number is  1.00E-03                                                                   
+ 2.     frozen core approximation in G switched on up to state =    3                                       
+ 3.     frozen core approximation in W switched on up to state =    3                                       
+
+
+
+ This is the end
+

@@ -1,0 +1,16 @@
+&molgw
+ move_nuclei='relax'
+ scf='hf'
+ tolscf=1.0e-10
+ nscf=50
+ ignore_restart='yes'
+
+ basis='6-31G**'
+
+ natom=2
+ alpha_mixing=0.7
+ mixing_scheme='simple'
+
+/
+H  -0.50 0. 0.
+H   0.50 0. 0. 

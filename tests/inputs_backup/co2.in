@@ -1,0 +1,20 @@
+&molgw
+ scf='lda'
+ tolscf=1.0e-9
+ npulay_hist=8
+
+ postscf='gw'
+ frozencore='yes'
+ print_sigma='yes'
+ selfenergy_state_min=11
+ selfenergy_state_max=12
+
+ basis='6-31G'
+ gaussian_type='cart'
+ basis_path='../../basis'
+
+ natom=3
+/
+O    0.0000   -0.6673    0.0000
+O    2.3010   -0.6673    0.0000
+C    1.1505    0.0000    0.0000
