@@ -17,6 +17,7 @@ Currently, I'm working on a few things:
 - A paper for OpenMP and OpenACC implementations (https://onlinelibrary.wiley.com/doi/full/10.1002/qua.27345)
 - Multi-GPU support
 - AMD GPU support
+- OpenMP offloading support
 
 Please let me know if you have any questions. :)
 
