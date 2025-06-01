@@ -8,7 +8,7 @@
 
 Hi there,
 
-I implemented OpenMP (CPU) and OpenACC (GPU) into MOLGW 1 [https://molgw.org].
+I parallelized and accelerated MOLGW 1 [https://molgw.org] using OpenMP (CPU) and OpenACC (GPU), respectively.
 I already merged my OpenMP implemenation into MOLGW 2 [https://github.com/molgw/molgw/pull/5], and I'll merge my OpenACC implementation into MOLGW 3 soon.
 For now, the OpenACC version of MOLGW runs on a single NVIDIA GPU.
 
