@@ -21,6 +21,8 @@ Currently, I'm working on a few things:
 - Multi-GPU support
 - AMD GPU support
 - OpenMP offloading support
+- Replacing LAPACK with cuSOLVER using OpenACC-CUDA interoperability
+- Replacing Libint with LibintX using OpenACC-CUDA interoperability
   
 [A paper for OpenMP and OpenACC implementations]: #
 
