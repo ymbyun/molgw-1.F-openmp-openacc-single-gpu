@@ -21,7 +21,7 @@ Currently, I'm working on a few things:
 - Multi-GPU support
 - AMD GPU support
 - OpenMP offloading support
-- Replacing BLAS/LAPACK with cuBLAS/cuSOLVER using OpenACC-CUDA interoperability
+- Replacing BLAS/LAPACK with NVBLAS or cuBLAS/cuSOLVER using OpenACC-CUDA interoperability
 - Replacing Libint with LibintX using OpenACC-CUDA interoperability
 - GPU acceleration of DOT_PRODUCT and MATMUL (There are multiple ways to do it)
   
